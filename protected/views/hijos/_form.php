@@ -40,7 +40,7 @@
 						   array(
 						    'name'=>'id_persona', // Nombre para el campo de autocompletar
 						    'model'=>$model,
-						    'value'=>$model->isNewRecord ? '' : $model->persona->apellido.' '.$model->persona->nombre,
+						    'value'=>$model->isNewRecord ? '' : $model->persona->nombre.' '.$model->persona->apellido,
 						    'source'=>$this->createUrl('nomina/autocomplete'), // URL que genera el conjunto de datos
 						    'options'=> array(
 						      'showAnim'=>'fold',
@@ -54,7 +54,7 @@
 						     'size'=>60,
 						     'class'=>'form-control',
 						     'placeholder'=>'Buscar persona...',
-						     'title'=>'Indique la persona que tendrá la reunión.'
+						     'title'=>'Indique el nombre del Padre/Madre.'
 						     ),
 						   ));  
 						 ?>
@@ -69,7 +69,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-child fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Nombre')); ?>
+						<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Nombre', 'title'=>'Indique el Nombre.')); ?>
 						<?php echo  $model->hasErrors('nombre') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'nombre'); ?>
@@ -81,7 +81,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-child fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'apellido',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Apellido')); ?>
+						<?php echo $form->textField($model,'apellido',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Apellido', 'title'=>'Indique el Apellido')); ?>
 						<?php echo  $model->hasErrors('apellido') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'apellido'); ?>
@@ -93,7 +93,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'fecha_nac',array('class'=>'form-control','placeholder'=>'Fecha de Nacimiento')); ?>
+						<?php echo $form->dateField($model,'fecha_nac',array('class'=>'form-control','placeholder'=>'Fecha de Nacimiento', 'title'=>'Indique la fecha de nacimiento.')); ?>
 						<?php echo  $model->hasErrors('fecha_nac') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'fecha_nac'); ?>

@@ -28,21 +28,21 @@
 		</div>
 		<div class="panel-body">
 			<fieldset>
-				<div class="form-group input-group<?php echo $model->hasErrors('nombre_emp') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('nombre_emp') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-briefcase fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'nombre_emp',array('size'=>50,'maxlength'=>50,'class'=>'form-control','placeholder'=>'Nombre de Empresa')); ?>
+						<?php echo $form->textField($model,'nombre_emp',array('size'=>50,'maxlength'=>50,'class'=>'form-control','placeholder'=>'Nombre de Empresa' , 'title'=>'Indique el nombre de la empresa.')); ?>
 						<?php echo  $model->hasErrors('nombre_emp') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'nombre_emp'); ?>
 				</div>
 
-				<div class="form-group input-group<?php echo $model->hasErrors('direccion') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('direccion') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						
-						<?php echo $form->textArea($model,'direccion',array('rows'=>6, 'cols'=>50,'class'=>'form-control','placeholder'=>'Dirección')); ?>
+						<?php echo $form->textArea($model,'direccion',array('rows'=>6, 'cols'=>95,'class'=>'form-control','placeholder'=>'Dirección','title'=>'Indique la direccion de la empresa.')); ?>
 						<?php echo  $model->hasErrors('direccion') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'direccion'); ?>
@@ -53,7 +53,16 @@
 						<span class="input-group-addon">
 							<i class="fa fa-phone fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'telefono',array('size'=>11,'maxlength'=>11,'class'=>'form-control','placeholder'=>'Teléfono')); ?>
+						<?php 
+						 $this->widget('CMaskedTextField', array(
+						  'model' => $model,
+						  'attribute' => 'telefono',
+						  'mask' => '(9999)-999-9999',
+						  'htmlOptions' => array('size' => 11, 
+						  'class'=>'form-control','placeholder'=>'Teléfono', 'title'=>'Indique el numero de telefono de la empresa.'	
+						  	)
+						 ));
+						?> 
 						<?php echo  $model->hasErrors('telefono') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'telefono'); ?>
@@ -64,7 +73,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-barcode fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'rif',array('size'=>15,'maxlength'=>15,'class'=>'form-control','placeholder'=>'Rif')); ?>
+						<?php echo $form->textField($model,'rif',array('size'=>15,'maxlength'=>15,'class'=>'form-control','placeholder'=>'Rif', 'title'=>'Indique el RIF de la empresa.')); ?>
 						<?php echo  $model->hasErrors('rif') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'rif'); ?>

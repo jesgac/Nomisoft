@@ -59,9 +59,9 @@ class Obras extends CActiveRecord
 			'id' => 'ID',
 			'nombre_obra' => 'Nombre Obra',
 			'direccion' => 'Direccion',
-			'fech_ini' => 'Fech Ini',
-			'fech_fin' => 'Fech Fin',
-			'status' => 'Status',
+			'fech_ini' => 'Fecha Ini',
+			'fech_fin' => 'Fecha Fin',
+			'status' => 'Estatus',
 		);
 	}
 

@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Empresas'=>array('admin'),
-	'Create',
+	'Nueva',
 );
 
 $this->menu=array(

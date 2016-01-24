@@ -34,7 +34,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-building-o fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'nombre_obra',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Nombre de la Obra')); ?>
+						<?php echo $form->textField($model,'nombre_obra',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Nombre de la Obra', 'title'=>'Indique el Nombre de la Obra.')); ?>
 						<?php echo  $model->hasErrors('nombre_obra') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'nombre_obra'); ?>
@@ -42,7 +42,7 @@
 
 				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('direccion') ? ' has-error' : ''; ?>">
 					<div class="input-group">
-						<?php echo $form->textArea($model,'direccion',array('rows'=>6, 'cols'=>50,'size'=>60,'maxlength'=>100,'class'=>'form-control','placeholder'=>'Dirección')); ?>
+						<?php echo $form->textArea($model,'direccion',array('rows'=>6, 'cols'=>95,'size'=>60,'maxlength'=>100,'class'=>'form-control','placeholder'=>'Dirección', 'title'=>'Indique la direccion de la Obra.')); ?>
 						<?php echo  $model->hasErrors('direccion') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'direccion'); ?>
@@ -53,7 +53,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'fech_ini',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Fecha de Inicio')); ?>
+						<?php echo $form->dateField($model,'fech_ini',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Fecha de Inicio', 'title'=>'Indique la Fecha de Inicio de la Obra.')); ?>
 						<?php echo  $model->hasErrors('fech_ini') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'fech_ini'); ?>
@@ -64,7 +64,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'fech_fin',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Fecha de Culminación')); ?>
+						<?php echo $form->dateField($model,'fech_fin',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Fecha de Culminación', 'title'=>'Indique la Fecha de culminacion de la Obra.')); ?>
 						<?php echo  $model->hasErrors('fech_fin') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'fech_fin'); ?>
@@ -75,7 +75,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-check fa-fw"></i>
 						</span>
-						<?php echo $form->dropDownList($model, 'status', array(''=>'Estatus','0'=>'Inactiva', '1'=>'Activa'),array('class'=>'form-control')); ?>
+						<?php echo $form->dropDownList($model, 'status', array(''=>'Estatus','0'=>'Inactiva', '1'=>'Activa'),array('class'=>'form-control', 'title'=>'Indique si la obra esta Activa o Inactiva.')); ?>
 						<?php echo  $model->hasErrors('status') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'status'); ?>

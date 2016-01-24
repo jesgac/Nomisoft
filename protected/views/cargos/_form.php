@@ -29,12 +29,12 @@
 		<div class="panel-body">
 			<fieldset>
 				
-				<div class="form-group input-group<?php echo $model->hasErrors('cargo') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('cargo') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-mortar-board fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'cargo',array('size'=>50,'maxlength'=>50,'class'=>'form-control','placeholder'=>'Cargo')); ?>
+						<?php echo $form->textField($model,'cargo',array('size'=>50,'maxlength'=>50,'class'=>'form-control','placeholder'=>'Cargo', 'title'=>'Indique el nombre del Cargo')); ?>
 						<?php echo  $model->hasErrors('cargo') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'cargo'); ?>
@@ -45,7 +45,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'sueldo',array('class'=>'form-control','placeholder'=>'Sueldo')); ?>
+						<?php echo $form->textField($model,'sueldo',array('class'=>'form-control','placeholder'=>'Sueldo', 'title'=>'Indique el Sueldo en Bs.')); ?>
 						<?php echo  $model->hasErrors('sueldo') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'sueldo'); ?>
@@ -56,7 +56,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-check fa-fw"></i>
 						</span>
-						<?php echo $form->dropDownList($model, 'tipo_sueldo', array(''=>'Tipo Sueldo','1'=>'Semanal', '2'=>'Mensual'),array('class'=>'form-control')); ?>
+						<?php echo $form->dropDownList($model, 'tipo_sueldo', array(''=>'Tipo Sueldo','1'=>'Semanal', '2'=>'Mensual'),array('class'=>'form-control', 'title'=>'Indique el Tipo de sueldo')); ?>
 						<?php echo  $model->hasErrors('tipo_sueldo') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'tipo_sueldo'); ?>

@@ -62,7 +62,7 @@
 					<?php echo $form->error($model,'id_persona'); ?>
 				</div>
 	
-					<div class="form-group input-group<?php echo $model->hasErrors('user') ? ' has-error' : ''; ?>">
+					<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('user') ? ' has-error' : ''; ?>">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="fa fa-user fa-fw"></i>
@@ -73,7 +73,7 @@
 						<?php echo $form->error($model,'user'); ?>
 					</div>
 
-					<div class="form-group input-group<?php echo $model->hasErrors('pass') ? ' has-error' : ''; ?>">
+					<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('pass') ? ' has-error' : ''; ?>">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="fa fa-key fa-fw"></i>

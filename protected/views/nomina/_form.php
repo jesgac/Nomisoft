@@ -23,7 +23,7 @@
 	</div>
 		<div class="panel-body">
 			<fieldset>
-				<div class="form-group input-group<?php echo $a->hasErrors('id_empleado') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $a->hasErrors('id_empleado') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-male fa-fw"></i>
@@ -78,7 +78,7 @@
 					</div>
 					<?php echo $form->error($b,'asistencia'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $b->hasErrors('b_alimenticio') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $b->hasErrors('b_alimenticio') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -88,7 +88,7 @@
 					</div>
 					<?php echo $form->error($b,'b_alimenticio'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $b->hasErrors('feriado') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $b->hasErrors('feriado') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -98,7 +98,7 @@
 					</div>
 					<?php echo $form->error($b,'feriado'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $b->hasErrors('horasextra_diurna') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $b->hasErrors('horasextra_diurna') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -109,7 +109,7 @@
 					<?php echo $form->error($b,'horasextra_diurna'); ?>
 				</div>
 
-				<div class="form-group input-group<?php echo $b->hasErrors('horasextras_nocturna') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $b->hasErrors('horasextras_nocturna') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -119,7 +119,7 @@
 					</div>
 					<?php echo $form->error($b,'horasextras_nocturna'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $a->hasErrors('prestamos') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $a->hasErrors('prestamos') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -129,7 +129,7 @@
 					</div>
 					<?php echo $form->error($a,'prestamos'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $b->hasErrors('sabado') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $b->hasErrors('sabado') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -139,7 +139,7 @@
 					</div>
 					<?php echo $form->error($b,'sabado'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $a->hasErrors('vaciado') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $a->hasErrors('vaciado') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -149,7 +149,7 @@
 					</div>
 					<?php echo $form->error($a,'vaciado'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $a->hasErrors('otros') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $a->hasErrors('otros') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -162,7 +162,7 @@
 				<hr>
 
 				
-				<div class="form-group input-group<?php echo $a->hasErrors('descuento') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $a->hasErrors('descuento') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -182,7 +182,7 @@
 					</div>
 					<?php echo $form->error($c,'lph'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $c->hasErrors('inasistencia') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $c->hasErrors('inasistencia') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>

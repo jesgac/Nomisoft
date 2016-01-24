@@ -58,7 +58,7 @@
 					</div>
 					<?php echo $form->error($model,'tipo_bono'); ?>
 				</div>
-				<div class="form-group input-group<?php echo $model->hasErrors('bono') ? ' has-error' : ''; ?>">
+				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('bono') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>

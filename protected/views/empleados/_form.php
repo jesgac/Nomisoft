@@ -53,7 +53,7 @@
 						     'size'=>60,
 						     'class'=>'form-control',
 						     'placeholder'=>'Buscar persona...',
-						     'title'=>'Indique la persona que tendrá la reunión.'
+						     'title'=>'Indique el nombre de la persona.'
 						     ),
 						   ));  
 						 ?>
@@ -89,7 +89,7 @@
 						     'size'=>60,
 						     'class'=>'form-control',
 						     'placeholder'=>'Buscar Obra...',
-						     'title'=>'Indique la persona que tendrá la reunión.'
+						     'title'=>'Indique el nombre de la Obra'
 						     ),
 						   ));  
 						 ?>
@@ -104,7 +104,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-bank fa-fw"></i>
 						</span>
-						<?php echo $form->textField($a,'nro_cuenta',array('size'=>20,'maxlength'=>20,'class'=>'form-control','placeholder'=>'Cuenta')); ?>
+						<?php echo $form->textField($a,'nro_cuenta',array('size'=>20,'maxlength'=>20,'class'=>'form-control','placeholder'=>'Cuenta', 'title'=>'Indique el Numero de Cuenta.')); ?>
 						<?php echo  $a->hasErrors('nro_cuenta') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($a,'nro_cuenta'); ?>
@@ -149,7 +149,7 @@
 							'0190'=>'CITIBANK N.A.',
 							'0191'=>'BANCO NACIONAL CRÉDITO, C.A. BANCO UNIVERSAL',
 							'0601'=>'INSTITUTO MUNICIPAL DE CRÉDITO POPULAR',
-						),array('class'=>'form-control')); ?>
+						),array('class'=>'form-control', 'title'=>'Indique el Banco.')); ?>
 						<?php echo  $a->hasErrors('cod_banco') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($a,'cod_banco'); ?>
@@ -179,7 +179,7 @@
 						     'size'=>60,
 						     'class'=>'form-control',
 						     'placeholder'=>'Buscar Empresa...',
-						     'title'=>'Indique la persona que tendrá la reunión.'
+						     'title'=>'Indique el nombre de la Empresa.'
 						     ),
 						   ));  
 						 ?>
@@ -193,7 +193,7 @@
 					<span class="input-group-addon">
 						<i class="fa fa-slack fa-fw"></i>
 					</span>
-					<?php echo $form->textField($b,'talla_zapato',array('size'=>11,'maxlength'=>11,'class'=>'form-control','placeholder'=>'Talla de Zapato')); ?>
+					<?php echo $form->textField($b,'talla_zapato',array('size'=>11,'maxlength'=>11,'class'=>'form-control','placeholder'=>'Talla de Zapato', 'title'=>'Indique la talla de Calzado.')); ?>
 				</div>
 				<?php echo $form->error($b,'talla_zapato',array('class'=>'alert alert-danger','style'=>'padding:6px;')); ?>
 				
@@ -202,7 +202,7 @@
 					<span class="input-group-addon">
 						<i class="fa fa-slack fa-fw"></i>
 					</span>
-					<?php echo $form->textField($b,'talla_camisa',array('size'=>11,'maxlength'=>11,'class'=>'form-control','placeholder'=>'Talla de Camisa')); ?>
+					<?php echo $form->textField($b,'talla_camisa',array('size'=>11,'maxlength'=>11,'class'=>'form-control','placeholder'=>'Talla de Camisa', 'title'=>'Indique la talla de Camisa.')); ?>
 				</div>
 				<?php echo $form->error($b,'talla_camisa',array('class'=>'alert alert-danger','style'=>'padding:6px;')); ?>
 				
@@ -211,7 +211,7 @@
 					<span class="input-group-addon">
 						<i class="fa fa-slack fa-fw"></i>
 					</span>
-					<?php echo $form->textField($b,'talla_pantalon',array('size'=>11,'maxlength'=>11,'class'=>'form-control','placeholder'=>'Talla de Pantalon')); ?>
+					<?php echo $form->textField($b,'talla_pantalon',array('size'=>11,'maxlength'=>11,'class'=>'form-control','placeholder'=>'Talla de Pantalon', 'title'=>'Indique la talla de Pantalon.')); ?>
 				</div>
 				<?php echo $form->error($b,'talla_pantalon',array('class'=>'alert alert-danger','style'=>'padding:6px;')); ?>
 				
@@ -242,7 +242,7 @@
 						     'size'=>60,
 						     'class'=>'form-control',
 						     'placeholder'=>'Buscar Cargo...',
-						     'title'=>'Indique la persona que tendrá la reunión.'
+						     'title'=>'Indique el cargo del trabajador.'
 						     ),
 						   ));  
 						 ?>
@@ -264,7 +264,7 @@
 							''=>'Seleccione un Tipo',
 							'1'=>'Obrero',
 							'2'=>'Empleado'
-						),array('class'=>'form-control')); ?>
+						),array('class'=>'form-control', 'title'=>'Indique el tipo de Trabajador.')); ?>
 					<?php echo  $a->hasErrors('tipo_empleado') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>	
 					</div>
 					<?php echo $form->error($a,'tipo_empleado'); ?>

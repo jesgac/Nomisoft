@@ -157,20 +157,18 @@ class Personas extends CActiveRecord
 
 	public function getHijos(){
 		$text = "<tr>
-		<td colspan='4'>N/A</td>
-		<td colspan='2'>N/A</td>
-		<td>N/A</td>
-		</tr>";
+		<td class= 'center'>N/A</td>
+		<td class= 'center'>N/A</td>
+		<td>N/A</td>";
 		if(!empty($this->hijos))
 		{
 			$text = '';
 		    foreach($this->hijos as $hijo)
 		    {
 		        $text .= "<tr>
-				<td colspan='4'>".$hijo->nombre." ".$hijo->apellido."</td>
-				<td colspan='2'>".date('d-m-Y',strtotime($hijo->fecha_nac))."</td>
-				<td>".calculaEdad($hijo->fecha_nac)."</td>
-				</tr>";
+				<td class= 'center'>".$hijo->nombre." ".$hijo->apellido."</td>
+				<td class= 'center'>".date('d-m-Y',strtotime($hijo->fecha_nac))."</td>
+				<td class= 'center'>".calculaEdad($hijo->fecha_nac)."</td>";
 		    }
 		}
 		return $text;	
@@ -253,20 +251,20 @@ class Personas extends CActiveRecord
 	}
 
 	public function getTallas(){
-		$text = "<tr>
-		<td colspan='3' class='center'>N/A</td>
+		$text = "
 		<td colspan='2' class='center'>N/A</td>
-		<td colspan='2' class='center'>N/A</td>
+		<td class='center'>N/A</td>
+		<td class='center'>N/A</td>
 		</tr>";
 		if(!empty($this->tallas))
 		{
 			$text = '';
 		    foreach($this->tallas as $talla)
 		    {
-		        $text .= "<tr>
-				<td colspan='3' class='center'>".$talla->talla_camisa."</td>
-				<td colspan='2' class='center'>".$talla->talla_pantalon."</td>
-				<td colspan='2' class='center'>".$talla->talla_zapato."</td>
+		        $text .= "
+				<td colspan='2' class='center'>".$talla->talla_camisa."</td>
+				<td class='center'>".$talla->talla_pantalon."</td>
+				<td class='center'>".$talla->talla_zapato."</td>
 				</tr>";
 		    }
 		}

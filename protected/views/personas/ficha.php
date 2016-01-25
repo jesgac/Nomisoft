@@ -8,22 +8,25 @@
 			font-family: Helvetica;
 		}
 		table{
+
+			font-size:10px;
 			border-collapse: collapse;
 			border-left-style: solid;
 			border-left-color:black;
-			border-left-width: 3px;
+			border-left-width: 1px;
 			border-bottom-style: solid;
 			border-bottom-color:black;
-			border-bottom-width: 3px;
+			border-bottom-width: 1px;
 			border-right-style: solid;
 			border-right-color:black;
-			border-right-width: 3px;
+			border-right-width: 1px;
 			border-top-style: solid;
 			border-top-color:black;
-			border-top-width: 3px;
+			border-top-width: 1px;
 		}
 		td{
-			padding: 8px;
+			padding-top: 2px;
+			padding-bottom: 6px;
 		}
 		.bold{
 			font-weight: bold;
@@ -40,15 +43,15 @@
 	</style>
 </head>
 <body>
-
+	<center>
 	<table border="0" class="no-border">
-		<tr style="font-size:24px;">
+		<tr style="font-size:14px;">
 			<td colspan="7" class="bold no-border center">FICHA DEL TRABAJADOR</td>	
 		</tr>
-		<tr style="font-size:24px;">
+		<tr style="font-size:14px;">
 			<td bgcolor="blue" colspan="7" class="bold no-border"></td>	
 		</tr>
-		<tr style="font-size:24px;">
+		<tr style="font-size:14px;">
 			<td bgcolor="cyan" colspan="7" class="bold no-border center">Datos Personales</td>	
 		</tr>
 		<tr>
@@ -89,25 +92,30 @@
 			<td class="bold">Telefono</td>
 			<td colspan="2"><?php echo $model->telefono; ?></td>			
 		</tr>
-		<tr style="font-size:24px;">
+		<tr style="font-size:14px;">
 			<td bgcolor="blue" colspan="7" class="bold no-border"></td>	
 		</tr>
-		<tr style="font-size:24px;">
-			<td bgcolor="cyan" colspan="7" class="bold no-border center">Familiares</td>	
+		<tr style="font-size:14px;">
+			<td bgcolor="cyan" colspan="3" class="bold no-border center">Familiares</td>
+			<td bgcolor="cyan" colspan="4" class="bold no-border center">Uniforme</td>		
 		</tr>
 		<tr>
-			<td colspan="4"class="bold center">Hijos</td>
-			<td colspan="2"class="bold center">Fecha de Nacimiento</td>
-			<td class="bold center">Edad</td>		
+			<td class="bold center">Hijos</td>
+			<td class="bold center">Fecha de Nacimiento</td>
+			<td class="bold center">Edad</td>
+			<td colspan="2" class="bold center">Talla de Camisa</td>
+			<td class="bold center">Talla de Pantalon</td>
+			<td class="bold center">Talla de Zapatos</td>		
 		</tr>
 		<?php echo $model->getHijos(); ?>
+		<?php echo $model->getTallas(); ?>
 
 
 
-		<tr style="font-size:24px;">
+		<tr style="font-size:14px;">
 			<td bgcolor="blue" colspan="7" class="bold no-border"></td>	
 		</tr>
-		<tr style="font-size:24px;">
+		<tr style="font-size:14px;">
 			<td bgcolor="cyan" colspan="7" class="bold no-border center">Empresa</td>	
 		</tr>
 		<tr>
@@ -124,18 +132,10 @@
 			<td class="center"><?php echo $model->getSueldo(); ?></td>	
 			<td class="center">Empleado</td>			
 		</tr>
-		<tr style="font-size:24px;">
+		<tr style="font-size:14px;">
 			<td bgcolor="blue" colspan="7" class="bold no-border"></td>	
 		</tr>
-		<tr style="font-size:24px;">
-			<td bgcolor="cyan" colspan="7" class="bold no-border center">Uniforme</td>	
-		</tr>
-		<tr>
-			<td colspan="3" class="bold center">Talla de Camisa</td>
-			<td colspan="2" class="bold center">Talla de Pantalon</td>
-			<td colspan="2" class="bold center">Talla de Zapatos</td>					
-		</tr>
-		<?php echo $model->getTallas(); ?>
+		
 
 		<tr>
 			<td colspan="7" class="no-border"><br><br></td>	

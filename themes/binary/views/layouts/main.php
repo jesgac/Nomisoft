@@ -45,7 +45,7 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                     <?php if (Yii::app()->user->getState('role') ==1||Yii::app()->user->getState('role') ==3) //Role
                     echo "
                     <li>
-                    <a href='#'><i class='fa fa-industry'></i>Datos Constructora<span class='fa'></span></a>
+                    <a><i class='fa fa-industry'></i>Datos Constructora<span class='fa'></span></a>
                     <ul class='nav nav-second-level'>
                         <li>
                             <a href='index.php?r=empresa/admin'>Empresa</a>
@@ -57,7 +57,7 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                     </li>
                     ";?>
                     <li>
-                        <a href="#"><i class="fa fa-male"></i>Datos Personales<span class="fa user"></span></a>
+                        <a><i class="fa fa-male"></i>Datos Personales<span class="fa user"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="index.php?r=personas/admin">Personas</a>
@@ -71,7 +71,7 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                       </li>
                     <li>
                     <li>
-                    <a href='#'><i class='fa fa-building'></i>Datos Empresariales<span class='fa'></span></a>
+                    <a><i class='fa fa-building'></i>Datos Empresariales<span class='fa'></span></a>
                     <ul class='nav nav-second-level'>
                         <li>
                             <a href='index.php?r=empleados/admin'>Trabajador</a>

@@ -39,6 +39,16 @@
 					</div>
 					<?php echo $form->error($model,'cargo'); ?>
 				</div>
+				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('tipo_sueldo') ? ' has-error' : ''; ?>">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-check fa-fw"></i>
+						</span>
+						<?php echo $form->dropDownList($model, 'tipo_sueldo', array(''=>'Tipo Sueldo','1'=>'Semanal', '2'=>'Mensual'),array('class'=>'form-control', 'title'=>'Indique el Tipo de sueldo')); ?>
+						<?php echo  $model->hasErrors('tipo_sueldo') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
+					</div>
+					<?php echo $form->error($model,'tipo_sueldo'); ?>
+				</div>
 
 				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('sueldo') ? ' has-error' : ''; ?>">
 					<div class="input-group">
@@ -51,16 +61,6 @@
 					<?php echo $form->error($model,'sueldo'); ?>
 				</div>
 				
-				<div class="form-group input-group col-sm-12<?php echo $model->hasErrors('tipo_sueldo') ? ' has-error' : ''; ?>">
-					<div class="input-group">
-						<span class="input-group-addon">
-							<i class="fa fa-check fa-fw"></i>
-						</span>
-						<?php echo $form->dropDownList($model, 'tipo_sueldo', array(''=>'Tipo Sueldo','1'=>'Semanal', '2'=>'Mensual'),array('class'=>'form-control', 'title'=>'Indique el Tipo de sueldo')); ?>
-						<?php echo  $model->hasErrors('tipo_sueldo') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
-					</div>
-					<?php echo $form->error($model,'tipo_sueldo'); ?>
-				</div>
 
 				<div class="form-group">
 				<?php echo CHtml::submitButton($model->isNewRecord ? 'Aceptar' : 'Guardar',array('class'=>'btn btn-primary btn-block')); ?>

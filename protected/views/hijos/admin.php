@@ -31,7 +31,15 @@ $this->menu=array(
 		),
 		'nombre',
 		'apellido',
-		'fecha_nac',
+        array(
+              'header'=>'Fecha de Nacimiento',
+              'name'=>'fecha_nac',
+              'value'=>function($data){
+                return date("d-m-Y",strtotime($data->fecha_nac));
+              }),
+
+
+
 		array(
             'class'=>'CButtonColumn',
             'htmlOptions'=>buttonWidth(),

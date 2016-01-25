@@ -26,7 +26,13 @@ $this->menu=array(
 			'htmlOptions'=>array('class'=>'table table-striped'),
 			'attributes'=>array(
 				'cedula',
-				'fecha_nac',
+				array(
+					'label'=>'Fecha de Nacimiento',
+					'value'=>function($data){
+						return date("d-m-Y",strtotime($data->fecha_nac));
+					}
+
+					),
 				'lugar_nac',
 				'nacionalidad',
 				'sexo',

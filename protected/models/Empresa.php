@@ -30,7 +30,6 @@ class Empresa extends CActiveRecord
 		return array(
 			array('nombre_emp, direccion, telefono, rif', 'required'),
 			array('nombre_emp', 'length', 'max'=>100),
-			array('telefono', 'length', 'max'=>11),
 			array('rif', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

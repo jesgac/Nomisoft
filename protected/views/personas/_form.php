@@ -131,7 +131,7 @@
 						  'model' => $model,
 						  'attribute' => 'telefono',
 						  'mask' => '(9999)-999-9999',
-						  'htmlOptions' => array('size' => 11, 
+						  'htmlOptions' => array('size' => 15, 
 						  'class'=>'form-control','placeholder'=>'Teléfono', 'title'=>'Indique el numero de telefono de la empresa.'	
 						  	)
 						 ));

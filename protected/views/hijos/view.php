@@ -31,7 +31,13 @@ $this->menu=array(
 			   'label'=>'Padre/Madre',
 			   'value'=>$model->persona->nombre." ".$model->persona->apellido
 				),
-			   'fecha_nac',
+			   array(
+					'label'=>'Fecha de Nacimiento',
+					'value'=>function($data){
+						return date("d-m-Y",strtotime($data->fecha_nac));
+					}
+
+				),
 			),
 		)); ?>
     </div>

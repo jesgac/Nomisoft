@@ -72,9 +72,6 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                     <a href='#'><i class='fa fa-building'></i>Datos Empresariales<span class='fa'></span></a>
                     <ul class='nav nav-second-level'>
                         <li>
-                            <a href='index.php?r=cargos/admin'>Cargos</a>
-                        </li>
-                        <li>
                             <a href='index.php?r=empleados/admin'>Trabajador</a>
                         </li>
                     </ul>

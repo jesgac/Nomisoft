@@ -71,6 +71,8 @@ $this->breadcrumbs=array(
         Menú
       </a>
       <a href="index.php?r=empleados/create" class="list-group-item">Nuevo Trabajador</a>
+      <a href='index.php?r=cargos/admin' class="list-group-item">Nuevo Cargo</a>
+
 </div>
 <?php 
     function viewVisible(){

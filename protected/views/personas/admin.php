@@ -21,7 +21,14 @@ $this->menu=array(
 	'columns'=>array(
 		'nombre',
 		'apellido',
-		'cedula',
+
+    array(
+          'header'=>'Cedula',
+          'name'=>'cedula',
+          'value'=>function($data){
+                  return number_format($data->cedula, 0,',','.');
+              },
+        ),
 		array(
       'header'=>'Fecha de Nacimiento',
       'name'=>'fecha_nac',

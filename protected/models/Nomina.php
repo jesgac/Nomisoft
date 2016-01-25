@@ -1,7 +1,8 @@
 <?php 
 	class Nomina extends CActiveRecord
 	{
-		
+		public $persona_search;
+		public $sueldo_search;
 		public $id_empleado;
 		public $id_asignacion;
 		public $otros;
@@ -9,6 +10,9 @@
 		public $fecha;
 		public $descuento;
 		public $prestamos;
+		public $total_asig;
+		public $total_deduc;
+		public $neto;
 
 		public function tableName()
 		{
@@ -23,7 +27,7 @@
 			array('otros,vaciado,descuento,prestamos', 'numerical'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			//array('id, b_alimenticio, asistencia, feriado, sabado, horasextra_diurna, horasextras_nocturna', 'safe', 'on'=>'search'),
+			array('persona_search, sueldo_search, neto, total_asig, total_deduc', 'safe', 'on'=>'search'),
 		);
 		}
 
@@ -61,6 +65,7 @@
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$criteria->with = array( 'persona', 'cargo' );
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('id_empleado',$this->id_empleado);
@@ -72,11 +77,27 @@
 		$criteria->compare('prestamos',$this->prestamos);
 		$criteria->compare('otros',$this->otros);
 		$criteria->compare('descuento',$this->descuento);
+		$criteria->compare( 'persona.nombre', $this->persona_search, true );
+		$criteria->compare( 'persona.apellido', $this->persona_search, true, 'OR' );
+		$criteria->compare( 'cargo.sueldo', $this->sueldo_search, true );
 		//$criteria->order = 'fecha';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-			'sort' => array( 'defaultOrder' => 'fecha DESC'),
+			'sort' => array( 'defaultOrder' => 'fecha DESC',
+				'attributes'=>array(
+		            'persona_search'=>array(
+		                'asc'=>'persona.nombre',
+		                'desc'=>'persona.nombre DESC',
+		            ),
+		            'sueldo_search'=>array(
+		                'asc'=>'cargo.sueldo',
+		                'desc'=>'cargo.sueldo DESC',
+		            ),
+		            '*',
+		        ),
+
+				),
 		));
 	}
 

@@ -28,12 +28,12 @@ $this->menu=array(
 		),
     array(
       'header'=>'Empleado',
-      'name'=>'id_empleado',
+      'name'=>'persona_search',
       'value'=>'$data->persona->nombre." ".$data->persona->apellido'
     ),
     array(
           'header'=>'Sueldo',
-          'name'=>'neto',
+          'name'=>'sueldo_search',
           'value'=>function($data){
                   return number_format($data->cargo->sueldo, 2,',','.');
               },

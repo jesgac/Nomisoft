@@ -51,7 +51,7 @@ $this->menu=array(
              ),*/
              'filter'=>CHtml::listData(Conceptos::getOnoffs(), 'id', 'title'),
         ),
-		array('header'=>'Valor','value'=>'$data->bono'),
+		array('header'=>'Valor','name'=>'bono','value'=>'$data->bono'),
 		array(
             'class'=>'CButtonColumn',
             'htmlOptions'=>buttonWidth(),

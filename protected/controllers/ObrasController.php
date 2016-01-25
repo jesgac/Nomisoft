@@ -28,10 +28,10 @@ class ObrasController extends Controller
 	{
 		if( Yii::app()->user->getState('role') ==1)
         {
-            $arr =array('create','update','autocomplete','admin','view');   // give all access to admin
+            $arr =array('create','update','admin','view','delete');   // give all access to admin
         }else{
         	if( Yii::app()->user->getState('role') ==3)
-        			$arr =array('create','update','autocomplete','admin','delete','view');   // give all access to admin
+        			$arr =array('create','update','admin','delete','view');   // give all access to admin
         		else
         			$arr = array('');
         }

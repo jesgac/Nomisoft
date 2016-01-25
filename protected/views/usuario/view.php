@@ -33,9 +33,12 @@ $this->menu=array(
 			'label'=>'Tipo de Usuario',
 			'value'=>function($data){
 				if($data->nivel=='1')
-					return "Administrador";
+					return "General";
 				else
-					return "Usuario";
+					if($data->nivel=='2')
+						return "Impresión";
+					else
+						return "Administrador";
 			}
 		),
 			),

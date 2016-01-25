@@ -88,7 +88,17 @@ $this->menu=array(
 </div>
 <?php 
   function viewVisible(){
-    if (Yii::app()->user->getState('role') ==3)
+    if (Yii::app()->user->getState('role') ==2)
+       return array(
+          'ficha'=>array(
+              'label'=>'',
+              'imageUrl'=>'',
+              'options'=>array('class'=>'fa fa-file-o  fa-fw'),
+              'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id))',
+          ),
+        );
+    
+    else
         return array(
             'view'=>array(
                 'label'=>'',
@@ -111,56 +121,24 @@ $this->menu=array(
                 'options'=>array('class'=>'fa fa-file-o  fa-fw'),
                 'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id))',
             ),
-        );
-    elseif (Yii::app()->user->getState('role') ==1)
-        return array(
-          'view'=>array(
-              'label'=>'',
-              'imageUrl'=>'',
-              'options'=>array('class'=>'fa fa-search  fa-fw'),
-          ),
-          'update'=>array(
-              'label'=>'',
-              'imageUrl'=>'',
-              'options'=>array('class'=>'fa fa-pencil  fa-fw'),
-          ),
-          'ficha'=>array(
-              'label'=>'',
-              'imageUrl'=>'',
-              'options'=>array('class'=>'fa fa-file-o  fa-fw'),
-              'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id))',
-          ),
-            
-        );
-    else
-       return array(
-          'ficha'=>array(
-              'label'=>'',
-              'imageUrl'=>'',
-              'options'=>array('class'=>'fa fa-file-o  fa-fw'),
-              'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id))',
-          ),
             
         ); 
         
 }
 
   function template(){
-      if (Yii::app()->user->getState('role') ==3)
-          return '{view}{update}{delete}{ficha}';
-      elseif (Yii::app()->user->getState('role') ==1)
-          return '{view}{update}{ficha}';
-      else
+      if (Yii::app()->user->getState('role') ==2)
           return '{ficha}';
+      else
+          return '{view}{update}{delete}{ficha}';
   }
 
   function buttonWidth(){
-      if (Yii::app()->user->getState('role') ==3)
-          return array('width'=>'90px');
-      elseif (Yii::app()->user->getState('role') ==1)
-          return array('width'=>'75px');
-      else
+      if (Yii::app()->user->getState('role') ==2)
+      
           return array('width'=>'50px');
+      else
+          return array('width'=>'90px');
 
   }
 ?>

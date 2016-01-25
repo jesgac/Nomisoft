@@ -32,7 +32,7 @@ $this->menu=array(
 					return "General";
 				else
 					if($data->nivel=='2')
-						return "General";
+						return "Impresión";
 					else
 						return "Administrador";
 			}

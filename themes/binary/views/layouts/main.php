@@ -57,17 +57,14 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                             <li>
                                 <a href="index.php?r=personas/admin">Personas</a>
                             </li>
-                            <?php  if (Yii::app()->user->getState('role') ==1||Yii::app()->user->getState('role') ==3) //Role
-                            echo "
+                            
                             <li>
                                 <a href='index.php?r=hijos/admin'>Hijos</a>
-                            </li>";
+                            </li>;
                             ?>
                         </ul>
                       </li>
                     <li>
-                    <?php if (Yii::app()->user->getState('role') ==1||Yii::app()->user->getState('role') ==3) //Role
-                    echo "
                     <li>
                     <a href='#'><i class='fa fa-building'></i>Datos Empresariales<span class='fa'></span></a>
                     <ul class='nav nav-second-level'>
@@ -76,7 +73,7 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                         </li>
                     </ul>
                     </li>
-                    ";?>
+                    ;?>
                     <?php 
                      if (Yii::app()->user->getState('role') ==1||Yii::app()->user->getState('role') ==3) //Role
                      echo "

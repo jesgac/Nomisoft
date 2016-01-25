@@ -26,17 +26,12 @@ class NominaController extends Controller
 	 */
 	public function accessRules()
 	{
-		if( Yii::app()->user->getState('role') ==1)
+		if( Yii::app()->user->getState('role') ==1 ||  Yii::app()->user->getState('role') ==3 )
         {
-            $arr =array('create','update','autocomplete','pdf','reporte','recibo','admin','view','imprimir');   // give all access to admin
+            $arr =array('create','update','pdf','reporte','recibo','admin','delete','view','imprimir');   // give all access to admin
         }else{
         	if( Yii::app()->user->getState('role') ==2)
         		$arr = array('admin','pdf','reporte','recibo','imprimir');
-        	else 
-        		if( Yii::app()->user->getState('role') ==3)
-        			$arr =array('create','update','autocomplete','pdf','reporte','recibo','admin','delete','view','imprimir');   // give all access to admin
-        		else
-        			$arr = array('');
         }
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions

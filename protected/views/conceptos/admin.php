@@ -70,8 +70,7 @@ $this->menu=array(
 </div>
 <?php 
     function viewVisible(){
-        if (Yii::app()->user->getState('role') ==3)
-            return array(
+        return array(
                 'view'=>array(
                     'label'=>'',
                     'imageUrl'=>'',
@@ -88,34 +87,18 @@ $this->menu=array(
                     'options'=>array('class'=>'fa fa-trash-o  fa-fw'),
                 ),
             );
-        else
-            return array(
-                'view'=>array(
-                    'label'=>'',
-                    'imageUrl'=>'',
-                    'options'=>array('class'=>'fa fa-search  fa-fw'),
-                ),
-                'update'=>array(
-                    'label'=>'',
-                    'imageUrl'=>'',
-                    'options'=>array('class'=>'fa fa-pencil  fa-fw'),
-                ),
-                
-            );
-
     }
 
+
     function template(){
-        if (Yii::app()->user->getState('role') ==3)
-            return '{view}{update}{delete}';
-        else
+        if (Yii::app()->user->getState('role') ==2)
             return '{view}{update}';
+        else
+            return '{view}{update}{delete}';
     }
 
     function buttonWidth(){
-        if (Yii::app()->user->getState('role') ==3)
-            return array('width'=>'80px');
-        else
-             return array('width'=>'auto');
+        return array('width'=>'80px');
+        
     }
 ?>

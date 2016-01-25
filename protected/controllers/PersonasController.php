@@ -28,10 +28,10 @@ class PersonasController extends Controller
 	{
 		if( Yii::app()->user->getState('role') ==1)
         {
-            $arr =array('create','update','ficha','admin','view');   // give all access to admin
+            $arr =array('create','update','ficha','admin','view','delete');   // give all access to admin
         }else{
         	if( Yii::app()->user->getState('role') ==2)
-        		$arr = array('admin','ficha');
+        		$arr = array('admin','ficha','create','update','view');
         	else 
         		if( Yii::app()->user->getState('role') ==3)
         			$arr =array('create','update','ficha','admin','delete','view');   // give all access to admin

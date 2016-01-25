@@ -26,14 +26,14 @@ class EmpleadosController extends Controller
 	 */
 	public function accessRules()
 	{
-		if( Yii::app()->user->getState('role') ==1)
+		if( Yii::app()->user->getState('role') ==1 ||  Yii::app()->user->getState('role') ==3 )
         {
-            $arr =array('create','update','autocomplete','admin','view');   // give all access to admin
+            $arr =array('create','update','admin','view','delete');   // give all access to admin
         }else{
-        	if( Yii::app()->user->getState('role') ==3)
-        			$arr =array('create','update','autocomplete','admin','delete','view');   // give all access to admin
-        		else
-        			$arr = array('');
+        	if( Yii::app()->user->getState('role') ==2)
+        		$arr = array('admin','create','update','view');
+        	else 
+        		$arr = array('');
         }
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -216,38 +216,6 @@ class EmpleadosController extends Controller
 		}
 	}
 
-	public function actionAutocomplete($term) 
-{
- $criteria = new CDbCriteria;
- $criteria->compare('LOWER(apellido)', strtolower($_GET['term']), true);
- $criteria->compare('LOWER(nombre)', strtolower($_GET['term']), true, 'OR');
- $criteria->order = 'apellido';
- $criteria->limit = 30;
- //$criteria->with('persona'); 
- $data = Personas::model()->findAll($criteria);
-
- if (!empty($data))
- {
-  $arr = array();
-  foreach ($data as $item) {
-   $arr[] = array(
-    'id' => $item->id,
-    'value' => $item->nombre.' '.$item->apellido,
-    'label' => $item->nombre.' '.$item->apellido,
-   );
-  }
- }
- else
- {
-  $arr = array();
-  $arr[] = array(
-   'id' => '',
-   'value' => 'No se han encontrado resultados para su búsqueda',
-   'label' => 'No se han encontrado resultados para su búsqueda',
-  );
- }
-  
- echo CJSON::encode($arr);
-}
+	
 
 }

@@ -25,6 +25,11 @@
                 </button>
                 <a class="navbar-brand" href="index.php" style="padding:0px;background-color:#428bca"><img src="<?php echo Yii::app()->baseUrl; ?>/images/logo.png" alt=""></a> 
             </div>
+ <?php if (Yii::app()->user->getState('role') ==3)
+    echo"
+<div style='color: white;
+padding: 20px 50px 0px 0px;
+float: right;'><a href='index.php?r=backup' class=' fa fa-download fa-2x' style='color:white;text-decoration:none'></a> </div>";?>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;

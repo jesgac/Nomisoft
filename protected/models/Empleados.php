@@ -16,6 +16,8 @@
  */
 class Empleados extends CActiveRecord
 {
+	private static $_items=array();
+
 	public $persona_search;
 	public $persona_search_2;
 	public $obra_search;
@@ -170,5 +172,34 @@ class Empleados extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public static function items($tipo)
+	{
+	 // Devuelve todos los ítems que forman el arreglo
+	 if(!isset(self::$_items[$tipo]))
+	  self::loadItems($tipo);
+	 return self::$_items[$tipo];
+	}
+
+	public static function item($tipo, $id)
+	{
+	 // Devuelve el ítem al que le corresponde el id
+	 if(!isset(self::$_items[$tipo]))
+	  self::loadItems($tipo);
+	 return isset(self::$_items[$tipo][$id]) ? self::$_items[$tipo][$id] : false;
+	}
+
+	private static function loadItems($tipo)
+	{
+	 // Obtiene los registros
+	 self::$_items[$tipo]=array();
+	 $criteria = new CDbCriteria;
+	 $criteria->order = 'nombre';
+	 $criteria->with = array('persona');
+	 $models=self::model()->findAll($criteria);
+	 self::$_items[$tipo][""]=""; // Descomentar para incluir un campo en blanco al inicio, para cuando el campo puede ser nulo
+	 foreach($models as $model)
+	  self::$_items[$tipo][$model->id]=$model->persona->nombre.' '.$model->persona->apellido;
 	}
 }

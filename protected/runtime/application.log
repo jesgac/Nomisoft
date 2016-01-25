@@ -114,3 +114,6 @@ REQUEST_URI=/proyecto4/index.php?r=nomina/create
 in C:\xampp\htdocs\proyecto4\protected\views\nomina\_form.php (31)
 in C:\xampp\htdocs\proyecto4\protected\views\nomina\create.php (15)
 in C:\xampp\htdocs\proyecto4\protected\controllers\NominaController.php (155)
+2016/01/25 02:04:20 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\proyecto4\protected\controllers\NominaController.php (92)
+in C:\xampp\htdocs\proyecto4\index.php (13)

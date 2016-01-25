@@ -33,7 +33,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-male fa-fw"></i>
 						</span>
-						<?php echo $form->dropDownList($a, 'id_persona', Empleados::items(1),array('class'=>'form-control','title'=>'Indique el nombre del Trabajador')); ?>
+						<?php echo $form->dropDownList($a, 'id_persona', Personas::items(1),array('class'=>'form-control','title'=>'Indique el nombre del Trabajador')); ?>
 
 						<?php echo  $a->hasErrors('id_persona') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>	
 					</div>

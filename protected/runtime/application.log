@@ -1199,3 +1199,1353 @@ Stack trace:
 REQUEST_URI=/nomisoft/index.php?r=cargos/admin
 HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
 ---
+2016/01/25 14:33:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=4
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:33:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=6
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:35:17 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=6
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:36:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=4
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:36:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=4
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:37:01 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp2\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp2\htdocs\Nomisoft\index.php (13)
+2016/01/25 14:37:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=8
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:39:06 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp2\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp2\htdocs\Nomisoft\index.php (13)
+2016/01/25 14:39:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=9
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:42:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=9
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:44:13 [error] [php] Undefined variable: arr (C:\xampp2\htdocs\Nomisoft\protected\controllers\NominaController.php:38)
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#3 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#4 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp2\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=nomina/admin
+in C:\xampp2\htdocs\Nomisoft\protected\controllers\NominaController.php (38)
+in C:\xampp2\htdocs\Nomisoft\index.php (13)
+2016/01/25 14:44:44 [error] [php] Undefined variable: arr (C:\xampp2\htdocs\Nomisoft\protected\controllers\NominaController.php:38)
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#2 C:\xampp2\htdocs\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#3 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#4 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp2\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=nomina/admin
+in C:\xampp2\htdocs\Nomisoft\protected\controllers\NominaController.php (38)
+in C:\xampp2\htdocs\Nomisoft\index.php (13)
+2016/01/25 14:45:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=9
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 14:48:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/delet...')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/delete&id=1
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 14:48:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personas/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=personas/delete&id=1
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=personas/admin
+---
+2016/01/25 14:49:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hijos/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=hijos/delete&id=2
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=hijos/admin
+---
+2016/01/25 14:49:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('obras/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=obras/delete&id=4
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=obras/admin
+---
+2016/01/25 14:49:16 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=empresa/delete&id=3
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empresa/admin
+---
+2016/01/25 15:02:25 [error] [php] Trying to get property of non-object (C:\xampp2\htdocs\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(231): CDataColumn->getDataCellContent()
+#1 C:\xampp2\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(154): CDataColumn->renderDataCellContent()
+#2 C:\xampp2\htdocs\yii\framework\zii\widgets\grid\CGridView.php(638): CDataColumn->renderDataCell()
+#3 C:\xampp2\htdocs\yii\framework\zii\widgets\grid\CGridView.php(622): CGridView->renderDataCell()
+#4 C:\xampp2\htdocs\yii\framework\zii\widgets\grid\CGridView.php(578): CGridView->renderTableRow()
+#5 C:\xampp2\htdocs\yii\framework\zii\widgets\grid\CGridView.php(488): CGridView->renderTableBody()
+#6 C:\xampp2\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#7 unknown(0): CGridView->renderSection()
+#8 C:\xampp2\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#9 C:\xampp2\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): CGridView->renderContent()
+#10 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(181): CGridView->run()
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\hijos\admin.php(50): HijosController->widget()
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require()
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): HijosController->renderInternal()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): HijosController->renderFile()
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): HijosController->renderPartial()
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\HijosController.php(153): HijosController->render()
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): HijosController->actionAdmin()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): HijosController->runAction()
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HijosController->filterAccessControl()
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): HijosController->runActionWithFilters()
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): HijosController->run()
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=hijos/admin
+in C:\xampp2\htdocs\Nomisoft\protected\views\hijos\admin.php (50)
+in C:\xampp2\htdocs\Nomisoft\protected\controllers\HijosController.php (153)
+in C:\xampp2\htdocs\Nomisoft\index.php (13)
+2016/01/25 15:04:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nomina/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=nomina/delete&id=1
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=nomina/admin
+---
+2016/01/25 15:12:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\xampp2\htdocs\yii\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empresa/delete')
+#10 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/nomisoft/index.php?r=empresa/delete&id=3
+HTTP_REFERER=http://192.168.1.105/nomisoft/index.php?r=empresa/admin
+---
+2016/01/25 15:26:40 [error] [php] Undefined variable: model (C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php:36)
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\CController.php(869): EmpleadosController->renderFile()
+#1 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): EmpleadosController->renderPartial()
+#2 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): EmpleadosController->renderInternal()
+#4 C:\xampp2\htdocs\yii\framework\web\CController.php(869): EmpleadosController->renderFile()
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(782): EmpleadosController->renderPartial()
+#6 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): EmpleadosController->render()
+#7 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#8 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): EmpleadosController->runAction()
+#10 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): EmpleadosController->filterAccessControl()
+#13 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(265): EmpleadosController->runActionWithFilters()
+#16 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): EmpleadosController->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp2\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+in C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php (36)
+in C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php (14)
+in C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php (104)
+2016/01/25 15:26:57 [error] [php] Undefined variable: c (C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php:36)
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\web\CController.php(869): EmpleadosController->renderFile()
+#1 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): EmpleadosController->renderPartial()
+#2 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): EmpleadosController->renderInternal()
+#4 C:\xampp2\htdocs\yii\framework\web\CController.php(869): EmpleadosController->renderFile()
+#5 C:\xampp2\htdocs\yii\framework\web\CController.php(782): EmpleadosController->renderPartial()
+#6 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): EmpleadosController->render()
+#7 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#8 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): EmpleadosController->runAction()
+#10 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): EmpleadosController->filterAccessControl()
+#13 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(265): EmpleadosController->runActionWithFilters()
+#16 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): EmpleadosController->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp2\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+in C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php (36)
+in C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php (14)
+in C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php (104)
+2016/01/25 15:50:29 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(307): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(288): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 15:50:29 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(307): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(288): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 15:50:29 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(307): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(288): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 15:59:20 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:00:21 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:00:22 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:00:22 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:00:22 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:00:23 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:03:46 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "persona" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'persona')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:05:15 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "model" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'model')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:05:16 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "model" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'model')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:05:16 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "model" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'model')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:05:25 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), '')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:05:27 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), '')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(306): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(287): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:09:53 [error] [exception.CException] exception 'CException' with message 'La propiedad "Empleados"."nombre" no se encuentra definida.' in C:\xampp2\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(204): CActiveRecord->__get('nombre')
+#2 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(182): Empleados::loadItems(1)
+#3 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Empleados::items(1)
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#5 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#13 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#24 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:10:45 [error] [exception.CException] exception 'CException' with message 'La propiedad "Empleados"."nombre" no se encuentra definida.' in C:\xampp2\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(204): CActiveRecord->__get('nombre')
+#2 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(182): Empleados::loadItems(1)
+#3 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Empleados::items(1)
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#5 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#13 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#24 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:10:47 [error] [exception.CException] exception 'CException' with message 'La propiedad "Empleados"."nombre" no se encuentra definida.' in C:\xampp2\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(204): CActiveRecord->__get('nombre')
+#2 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(182): Empleados::loadItems(1)
+#3 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Empleados::items(1)
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#5 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#13 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#24 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:10:55 [error] [exception.CException] exception 'CException' with message 'La propiedad "Empleados"."nombre" no se encuentra definida.' in C:\xampp2\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(204): CActiveRecord->__get('nombre')
+#2 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(182): Empleados::loadItems(1)
+#3 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Empleados::items(1)
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#5 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#13 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#24 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:10:55 [error] [exception.CException] exception 'CException' with message 'La propiedad "Empleados"."nombre" no se encuentra definida.' in C:\xampp2\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(204): CActiveRecord->__get('nombre')
+#2 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(182): Empleados::loadItems(1)
+#3 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Empleados::items(1)
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#5 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#13 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#24 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:10:56 [error] [exception.CException] exception 'CException' with message 'La propiedad "Empleados"."nombre" no se encuentra definida.' in C:\xampp2\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(204): CActiveRecord->__get('nombre')
+#2 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(182): Empleados::loadItems(1)
+#3 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Empleados::items(1)
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#5 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#13 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#24 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:10:59 [error] [exception.CException] exception 'CException' with message 'La propiedad "Empleados"."nombre" no se encuentra definida.' in C:\xampp2\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(204): CActiveRecord->__get('nombre')
+#2 C:\xampp2\htdocs\Nomisoft\protected\models\Empleados.php(182): Empleados::loadItems(1)
+#3 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Empleados::items(1)
+#4 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#5 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#6 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#13 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#24 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:22:43 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "id" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'id')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(303): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(284): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:23:04 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "nombre" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'nombre')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(303): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(284): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:23:05 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "nombre" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'nombre')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(303): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(284): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:23:05 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "nombre" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'nombre')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(303): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(284): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---
+2016/01/25 16:23:05 [error] [exception.CDbException] exception 'CDbException' with message 'La relación "nombre" no se encuentra definida en la clase active record "Personas".' in C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(299): CActiveFinder->buildJoinTree(Object(CJoinElement), 'nombre')
+#1 C:\xampp2\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(912): CActiveFinder->__construct(Object(Personas), Array)
+#3 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1360): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp2\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(303): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\xampp2\htdocs\Nomisoft\protected\models\Personas.php(284): Personas::loadItems(1)
+#7 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\_form.php(36): Personas::items(1)
+#8 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#9 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#10 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#11 C:\xampp2\htdocs\Nomisoft\protected\views\empleados\create.php(14): CController->renderPartial('_form', Array)
+#12 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp2\\htdoc...')
+#13 C:\xampp2\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp2\\htdoc...', Array, true)
+#14 C:\xampp2\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp2\\htdoc...', Array, true)
+#15 C:\xampp2\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#16 C:\xampp2\htdocs\Nomisoft\protected\controllers\EmpleadosController.php(104): CController->render('create', Array)
+#17 C:\xampp2\htdocs\yii\framework\web\actions\CInlineAction.php(49): EmpleadosController->actionCreate()
+#18 C:\xampp2\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp2\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp2\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp2\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp2\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp2\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp2\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#27 C:\xampp2\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('empleados/creat...')
+#28 C:\xampp2\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\xampp2\htdocs\Nomisoft\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/nomisoft/index.php?r=empleados/create
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=empleados/admin
+---

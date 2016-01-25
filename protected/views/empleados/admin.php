@@ -38,17 +38,17 @@ $this->breadcrumbs=array(
 		),
 		array(
 			'header'=>'Talla Camisa',
-			'name'=>'camisa_search',
+			//'name'=>'camisa_search',
 			'value'=>'$data->talla->talla_camisa'
 		),
 		array(
 			'header'=>'Talla Pantalon',
-			'name'=>'pantalon_search',
+			//'name'=>'pantalon_search',
 			'value'=>'$data->talla->talla_pantalon'
 		),
 		array(
 			'header'=>'Talla Zapato',
-			'name'=>'zapato_search',
+			//'name'=>'zapato_search',
 			'value'=>'$data->talla->talla_zapato'
 		),
 		/*

@@ -3,7 +3,7 @@
 /* @var $model Empleados */
 
 $this->breadcrumbs=array(
-	'Empleados'=>array('admin'),
+	'Trabajador'=>array('admin'),
 	'Gestionar',
 );
 
@@ -70,7 +70,7 @@ $this->breadcrumbs=array(
       <a href="#" class="list-group-item active">
         Menú
       </a>
-      <a href="index.php?r=empleados/create" class="list-group-item">Nuevo Empleado</a>
+      <a href="index.php?r=empleados/create" class="list-group-item">Nuevo Trabajador</a>
 </div>
 <?php 
     function viewVisible(){

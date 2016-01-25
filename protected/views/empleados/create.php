@@ -3,8 +3,8 @@
 /* @var $model Empleados */
 
 $this->breadcrumbs=array(
-	'Empleados'=>array('admin'),
-	'Crear',
+	'Trabajador'=>array('admin'),
+	'Nuevo',
 );
 
 ?>

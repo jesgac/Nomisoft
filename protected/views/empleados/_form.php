@@ -19,9 +19,9 @@
 		<div class="panel-heading">
 			<?php 
 				if($a->id!=""){
-					echo 'Modificar Empleado: '.$a->persona->nombre.' '.$a->persona->apellido;
+					echo 'Modificar Trabajador: '.$a->persona->nombre.' '.$a->persona->apellido;
 				}else{
-					echo 'Nuevo Empleado';
+					echo 'Nuevo Trabajador';
 				}
 			
 			?>

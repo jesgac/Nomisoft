@@ -15,8 +15,6 @@ $this->menu=array(
 );
 ?>
 
-<h1><?php echo $model->nombre." ".$model->apellido; ?></h1>
-
 <div class="block-fluid">                        
 	<div class="panel panel-default">
     <div class="panel-heading">

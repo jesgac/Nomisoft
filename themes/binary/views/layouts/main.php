@@ -75,7 +75,7 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                             <a href='index.php?r=cargos/admin'>Cargos</a>
                         </li>
                         <li>
-                            <a href='index.php?r=empleados/admin'>Empleados</a>
+                            <a href='index.php?r=empleados/admin'>Trabajador</a>
                         </li>
                     </ul>
                     </li>

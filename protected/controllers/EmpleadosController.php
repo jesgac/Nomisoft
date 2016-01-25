@@ -135,7 +135,7 @@ class EmpleadosController extends Controller
 				$this->redirect(array('view','id'=>$model->id));*/
 		}
 
-		$this->render('create',array(
+		$this->render('update',array(
 			'a'=>$a,
         	'b'=>$b,
 		));

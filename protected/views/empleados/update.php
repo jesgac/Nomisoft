@@ -3,19 +3,18 @@
 /* @var $model Empleados */
 
 $this->breadcrumbs=array(
-	'Empleadoses'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Trabajador'=>array('index'),
+	$a->persona->nombre.' '.$a->persona->apellido=>array('view','id'=>$a->id),
+	'Modificar',
 );
 
 $this->menu=array(
 	array('label'=>'List Empleados', 'url'=>array('index')),
 	array('label'=>'Create Empleados', 'url'=>array('create')),
-	array('label'=>'View Empleados', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'View Empleados', 'url'=>array('view', 'id'=>$a->id)),
 	array('label'=>'Manage Empleados', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Empleados <?php echo $model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('a'=>$a,'b'=>$b)); ?>

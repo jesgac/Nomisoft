@@ -199,7 +199,7 @@ class Empleados extends CActiveRecord
 	 $criteria->order = 'nombre';
 	 $criteria->with = array('persona');
 	 $models=self::model()->findAll($criteria);
-	 self::$_items[$tipo][""]="Seleccione el Nombre de empleado"; // Descomentar para incluir un campo en blanco al inicio, para cuando el campo puede ser nulo
+	 self::$_items[$tipo][""]="Seleccione el Nombre de Trabajador"; // Descomentar para incluir un campo en blanco al inicio, para cuando el campo puede ser nulo
 	 foreach($models as $model)
 	  self::$_items[$tipo][$model->id]=$model->persona->nombre.' '.$model->persona->apellido;
 	}

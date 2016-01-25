@@ -11,6 +11,7 @@
  */
 class Cargos extends CActiveRecord
 {
+	private static $_items=array();
 	/**
 	 * @return string the associated database table name
 	 */
@@ -115,4 +116,31 @@ if($onoff == 1)
 else 
     return 'Off';
 }
+public static function items($tipo)
+	{
+	 // Devuelve todos los ítems que forman el arreglo
+	 if(!isset(self::$_items[$tipo]))
+	  self::loadItems($tipo);
+	 return self::$_items[$tipo];
+	}
+
+	public static function item($tipo, $id)
+	{
+	 // Devuelve el ítem al que le corresponde el id
+	 if(!isset(self::$_items[$tipo]))
+	  self::loadItems($tipo);
+	 return isset(self::$_items[$tipo][$id]) ? self::$_items[$tipo][$id] : false;
+	}
+
+	private static function loadItems($tipo)
+	{
+	 // Obtiene los registros
+	 self::$_items[$tipo]=array();
+	 $criteria = new CDbCriteria;
+	 $criteria->order = 'cargo';
+	 $models=self::model()->findAll($criteria);
+	 self::$_items[$tipo][""]="Seleccione el Cargo"; // Descomentar para incluir un campo en blanco al inicio, para cuando el campo puede ser nulo
+	 foreach($models as $model)
+	  self::$_items[$tipo][$model->id]=$model->cargo;
+	}
 }

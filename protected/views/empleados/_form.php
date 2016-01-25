@@ -33,30 +33,8 @@
 						<span class="input-group-addon">
 							<i class="fa fa-male fa-fw"></i>
 						</span>
-						<?php
-						  echo $form->hiddenField($a,'id_persona',array()); // Campo oculto para guardar el ID de la persona seleccionada
-						  $this->widget('zii.widgets.jui.CJuiAutoComplete',
-						   array(
-						    'name'=>'id_persona', // Nombre para el campo de autocompletar
-						    'model'=>$a,
-						    'value'=>$a->isNewRecord ? '' : $a->persona->apellido.' '.$a->persona->nombre,
-						    'source'=>$this->createUrl('Empleados/autocomplete'), // URL que genera el conjunto de datos
-						    'options'=> array(
-						      'showAnim'=>'fold',
-						      'size'=>'30',
-						      'minLength'=>'3', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-						      'select'=>"js:function(event, ui) { 
-						       $('#Empleados_id_persona').val(ui.item.id); // HTML-Id del campo
-						       }"
-						      ),
-						    'htmlOptions'=> array(
-						     'size'=>60,
-						     'class'=>'form-control',
-						     'placeholder'=>'Buscar persona...',
-						     'title'=>'Indique el nombre de la persona.'
-						     ),
-						   ));  
-						 ?>
+						<?php echo $form->dropDownList($a, 'id_persona', Empleados::items(1),array('class'=>'form-control','title'=>'Indique el nombre del Trabajador')); ?>
+
 						<?php echo  $a->hasErrors('id_persona') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>	
 					</div>
 					<?php echo $form->error($a,'id_persona'); ?>
@@ -69,30 +47,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-building-o fa-fw"></i>
 						</span>
-						<?php
-						  echo $form->hiddenField($a,'id_obra',array()); // Campo oculto para guardar el ID de la persona seleccionada
-						  $this->widget('zii.widgets.jui.CJuiAutoComplete',
-						   array(
-						    'name'=>'id_obra', // Nombre para el campo de autocompletar
-						    'model'=>$a,
-						    'value'=>$a->isNewRecord ? '' : $a->obra->nombre_obra,
-						    'source'=>$this->createUrl('obras/autocomplete'), // URL que genera el conjunto de datos
-						    'options'=> array(
-						      'showAnim'=>'fold',
-						      'size'=>'30',
-						      'minLength'=>'3', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-						      'select'=>"js:function(event, ui) { 
-						       $('#Empleados_id_obra').val(ui.item.id); // HTML-Id del campo
-						       }"
-						      ),
-						    'htmlOptions'=> array(
-						     'size'=>60,
-						     'class'=>'form-control',
-						     'placeholder'=>'Buscar Obra...',
-						     'title'=>'Indique el nombre de la Obra'
-						     ),
-						   ));  
-						 ?>
+						<?php echo $form->dropDownList($a, 'id_obra', Obras::items(1),array('class'=>'form-control','title'=>'Indique el nombre de la Obra')); ?>
 						<?php echo  $a->hasErrors('id_obra') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($a,'id_obra'); ?>
@@ -159,30 +114,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-briefcase fa-fw"></i>
 						</span>
-						<?php
-						  echo $form->hiddenField($a,'id_empresa',array()); // Campo oculto para guardar el ID de la persona seleccionada
-						  $this->widget('zii.widgets.jui.CJuiAutoComplete',
-						   array(
-						    'name'=>'id_empresa', // Nombre para el campo de autocompletar
-						    'model'=>$a,
-						    'value'=>$a->isNewRecord ? '' : $a->empresa->nombre_emp,
-						    'source'=>$this->createUrl('empresa/autocomplete'), // URL que genera el conjunto de datos
-						    'options'=> array(
-						      'showAnim'=>'fold',
-						      'size'=>'30',
-						      'minLength'=>'3', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-						      'select'=>"js:function(event, ui) { 
-						       $('#Empleados_id_empresa').val(ui.item.id); // HTML-Id del campo
-						       }"
-						      ),
-						    'htmlOptions'=> array(
-						     'size'=>60,
-						     'class'=>'form-control',
-						     'placeholder'=>'Buscar Empresa...',
-						     'title'=>'Indique el nombre de la Empresa.'
-						     ),
-						   ));  
-						 ?>
+						<?php echo $form->dropDownList($a, 'id_empresa', Empresa::items(1),array('class'=>'form-control','title'=>'Indique el nombre de la Empresa')); ?>
 						<?php echo  $a->hasErrors('id_empresa') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($a,'id_empresa'); ?>
@@ -222,30 +154,9 @@
 						<span class="input-group-addon">
 							<i class="fa fa-graduation-cap fa-fw"></i>
 						</span>
-						<?php
-						  echo $form->hiddenField($a,'id_cargo',array()); // Campo oculto para guardar el ID de la persona seleccionada
-						  $this->widget('zii.widgets.jui.CJuiAutoComplete',
-						   array(
-						    'name'=>'id_cargo', // Nombre para el campo de autocompletar
-						    'model'=>$a,
-						    'value'=>$a->isNewRecord ? '' : $a->cargo->cargo,
-						    'source'=>$this->createUrl('cargos/autocomplete'), // URL que genera el conjunto de datos
-						    'options'=> array(
-						      'showAnim'=>'fold',
-						      'size'=>'30',
-						      'minLength'=>'3', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-						      'select'=>"js:function(event, ui) { 
-						       $('#Empleados_id_cargo').val(ui.item.id); // HTML-Id del campo
-						       }"
-						      ),
-						    'htmlOptions'=> array(
-						     'size'=>60,
-						     'class'=>'form-control',
-						     'placeholder'=>'Buscar Cargo...',
-						     'title'=>'Indique el cargo del trabajador.'
-						     ),
-						   ));  
-						 ?>
+						
+						<?php echo $form->dropDownList($a, 'id_cargo', Cargos::items(1),array('class'=>'form-control','title'=>'Indique el Cargo')); ?>
+
 						<?php echo  $a->hasErrors('id_cargo') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($a,'id_cargo'); ?>

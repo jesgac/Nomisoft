@@ -34,30 +34,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-male fa-fw"></i>
 						</span>
-						<?php
-						  echo $form->hiddenField($model,'id_persona',array()); // Campo oculto para guardar el ID de la persona seleccionada
-						  $this->widget('zii.widgets.jui.CJuiAutoComplete',
-						   array(
-						    'name'=>'id_persona', // Nombre para el campo de autocompletar
-						    'model'=>$model,
-						    'value'=>$model->isNewRecord ? '' : $model->persona->nombre.' '.$model->persona->apellido,
-						    'source'=>$this->createUrl('nomina/autocomplete'), // URL que genera el conjunto de datos
-						    'options'=> array(
-						      'showAnim'=>'fold',
-						      'size'=>'30',
-						      'minLength'=>'3', // Minimo de caracteres que hay que digitar antes de relizar la busqueda
-						      'select'=>"js:function(event, ui) { 
-						       $('#Hijos_id_persona').val(ui.item.id); // HTML-Id del campo
-						       }"
-						      ),
-						    'htmlOptions'=> array(
-						     'size'=>60,
-						     'class'=>'form-control',
-						     'placeholder'=>'Buscar persona...',
-						     'title'=>'Indique el nombre del Padre/Madre.'
-						     ),
-						   ));  
-						 ?>
+						<?php echo $form->dropDownList($model, 'id_persona', Empleados::items(1),array('class'=>'form-control','title'=>'Indique el nombre del Trabajador')); ?>
 						<?php echo  $model->hasErrors('id_persona') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'id_persona'); ?>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,6 +43,8 @@
 	</style>
 </head>
 <body>
+
+<div>
 	<center>
 	<table border="1">
 		<tr style="font-size:14px;">
@@ -273,6 +276,7 @@
 		</tr>
 		<tr><td colspan="6" class="no-border"> </td></tr>
 	</table>
+	</div>
 </body>
 <?php
 function lunes($date){
@@ -290,4 +294,8 @@ function lunes($date){
 	return $lunes.' al '.$viernes;
 }
 ?>
+
+
+
+
 </html>

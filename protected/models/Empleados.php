@@ -124,6 +124,7 @@ class Empleados extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'sort'=>array(
+		        'defaultOrder' => 'persona.nombre ASC',
 		        'attributes'=>array(
 		            'persona_search'=>array(
 		                'asc'=>'persona.nombre',

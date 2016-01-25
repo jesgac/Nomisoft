@@ -26,11 +26,11 @@ $this->menu=array(
 			'htmlOptions'=>array('class'=>'table table-striped'),
 			'attributes'=>array(
 				array(
-			'label'=>'Sueldo',
-			'value'=>function($data){
-            	return number_format($data->cargo->sueldo, 2,',','.')." Bs.";
-        	},
-		),
+					'label'=>'Sueldo',
+					'value'=>function($data){
+		            	return number_format($data->cargo->sueldo, 2,',','.')." Bs.";
+        			},
+				),
 		array(
 			'label'=>'Bono Alimenticio',
 			'value'=>function($data){

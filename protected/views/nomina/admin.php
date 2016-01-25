@@ -3,34 +3,22 @@
 /* @var $model Nomina */
 
 $this->breadcrumbs=array(
-	'Nomina'=>array('admin'),
-	'Gestionar',
+  'Nomina'=>array('admin'),
+  'Gestionar',
 );
 
 $this->menu=array(
-	array('label'=>'Nueva Nomina', 'url'=>array('create')),
+  array('label'=>'Nueva Nomina', 'url'=>array('create')),
 );
 
 ?>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'nomina-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'itemsCssClass'=>'table table-striped table-hover table-bordered',
-	'columns'=>array(
-		array(
-			'header'=>'Empleado',
-			'name'=>'id_empleado',
-			'value'=>'$data->persona->nombre." ".$data->persona->apellido'
-		),
-		array(
-			'header'=>'Sueldo',
-			'value'=>'$data->cargo->sueldo',
-		),
-		'total_asig',
-		'total_deduc',
-		'neto',
+  'id'=>'nomina-grid',
+  'dataProvider'=>$model->search(),
+  'filter'=>$model,
+  'itemsCssClass'=>'table table-striped table-hover table-bordered',
+  'columns'=>array(
 		array(
 			'header'=>'Fecha',
 			'name'=>'fecha',
@@ -38,6 +26,44 @@ $this->menu=array(
 				return date("d-m-Y",strtotime($data->fecha));
 			}
 		),
+    array(
+      'header'=>'Empleado',
+      'name'=>'id_empleado',
+      'value'=>'$data->persona->nombre." ".$data->persona->apellido'
+    ),
+    array(
+          'header'=>'Sueldo',
+          'name'=>'neto',
+          'value'=>function($data){
+                  return number_format($data->cargo->sueldo, 2,',','.');
+              },
+          'htmlOptions'=>array('style' => 'text-align: right;')
+    ),
+    array(
+          'header'=>'Total Asignaciones',
+          'name'=>'total_asig',
+          'value'=>function($data){
+                  return number_format($data->total_asig, 2,',','.');
+              },
+          'htmlOptions'=>array('style' => 'text-align: right;')
+    ),
+
+    array(
+          'header'=>'Total Deducciones',
+          'name'=>'total_deduc',
+          'value'=>function($data){
+                  return number_format($data->total_deduc, 2,',','.');
+              },
+          'htmlOptions'=>array('style' => 'text-align: right;')
+    ),
+    array(
+          'header'=>'Total Neto',
+          'name'=>'neto',
+          'value'=>function($data){
+                  return number_format($data->neto, 2,',','.');
+              },
+          'htmlOptions'=>array('style' => 'text-align: right;')
+    ),
 		/*
 		'vaciado',
 		'prestamos',

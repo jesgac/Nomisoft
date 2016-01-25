@@ -90,6 +90,7 @@ class Usuario extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort' => array( 'defaultOrder' => 'user ASC'),
 		));
 	}
 

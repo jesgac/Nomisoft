@@ -18,14 +18,15 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'itemsCssClass'=>'table table-striped table-hover table-bordered',
 	'columns'=>array(
+		'user',
 		array(
 			'header'=>'Empleado',
 			'name'=>'id_persona',
 			'value'=>'$data->persona->nombre." ".$data->persona->apellido'
 		),
-		'user',
 		array(
 			'header'=>'Tipo de Usuario',
+			'name'=>'nivel',
 			'value'=>function($data){
 				if($data->nivel=='1')
 					return "General";

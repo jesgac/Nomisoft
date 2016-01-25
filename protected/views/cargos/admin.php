@@ -20,7 +20,14 @@ $this->menu=array(
 	'itemsCssClass'=>'table table-striped table-hover table-bordered',
 	'columns'=>array(
 		'cargo',
-		'sueldo',
+        array(
+          'header'=>'Sueldo',
+          'name'=>'sueldo',
+          'value'=>function($data){
+                  return number_format($data->sueldo, 2,',','.');
+              },
+          'htmlOptions'=>array('style' => 'text-align: right;')
+        ),
 		/*array(
 			'header'=>'Tipo de Sueldo',
 			'value'=>function($data){

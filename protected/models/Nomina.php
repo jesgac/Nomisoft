@@ -72,9 +72,11 @@
 		$criteria->compare('prestamos',$this->prestamos);
 		$criteria->compare('otros',$this->otros);
 		$criteria->compare('descuento',$this->descuento);
+		//$criteria->order = 'fecha';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort' => array( 'defaultOrder' => 'fecha DESC'),
 		));
 	}
 

@@ -2792,3 +2792,70 @@ Stack trace:
 REQUEST_URI=/nomisoft/index.php?r=personas/admin
 HTTP_REFERER=http://localhost/nomisoft/index.php?r=persona/admin
 ---
+2016/01/26 01:50:46 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 01:51:16 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 01:51:33 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 01:51:58 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 01:56:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "autocomplete" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('autocomplete')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('autocomplete')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Empleados/autoc...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Nomisoft\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/nomisoft/index.php?r=Empleados/autocomplete&term=manue
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=usuario/create
+---
+2016/01/26 01:57:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "autocomplete" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('autocomplete')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('autocomplete')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Empleados/autoc...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Nomisoft\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/nomisoft/index.php?r=Empleados/autocomplete&term=manuel
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=usuario/create
+---
+2016/01/26 01:57:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "autocomplete" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('autocomplete')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('autocomplete')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Empleados/autoc...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Nomisoft\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/nomisoft/index.php?r=Empleados/autocomplete&term=manue
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=usuario/create
+---
+2016/01/26 01:57:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "autocomplete" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('autocomplete')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('autocomplete')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Empleados/autoc...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Nomisoft\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/nomisoft/index.php?r=Empleados/autocomplete&term=man
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=usuario/create
+---
+2016/01/26 01:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "autocomplete" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('autocomplete')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('autocomplete')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Empleados/autoc...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Nomisoft\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/nomisoft/index.php?r=Empleados/autocomplete&term=jon
+HTTP_REFERER=http://localhost/nomisoft/index.php?r=usuario/create
+---

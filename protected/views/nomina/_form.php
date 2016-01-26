@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 	'errorMessageCssClass' => 'text-error control-label'
 )); ?>
-<div class="panel panel-default" style="width:40%;">
+<div class="panel panel-default col-xs-12 ">
 	<div class="panel-heading">
 		<?php 
 			echo $a->isNewRecord ? 'Nueva Nomina' : 'Modificar: '.$a->persona->nombre.' '.$a->persona->apellido
@@ -44,8 +44,10 @@
 					</div>
 					<?php echo $form->error($a,'fecha'); ?>
 				</div>
+
 				<hr>
-				<div class="form-group input-group col-sm-12<?php echo $b->hasErrors('asistencia') ? ' has-error' : ''; ?>">
+				<div class="col-xs-6">
+					<div class="form-group input-group col-sm-12<?php echo $b->hasErrors('asistencia') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -136,10 +138,9 @@
 					</div>
 					<?php echo $form->error($a,'otros'); ?>
 				</div>
-				<hr>
-
-				
-				<div class="form-group input-group col-sm-12<?php echo $a->hasErrors('descuento') ? ' has-error' : ''; ?>">
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group input-group col-sm-12<?php echo $a->hasErrors('descuento') ? ' has-error' : ''; ?>">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
@@ -189,6 +190,12 @@
 					</div>
 					<?php echo $form->error($c,'sso'); ?>
 				</div>
+					
+				</div>
+				
+
+				
+				
 
 				<?php echo CHtml::submitButton($a->isNewRecord ? 'Aceptar' : 'Guardar',array('class'=>'btn btn-primary btn-block')); ?>
 			</fieldset>

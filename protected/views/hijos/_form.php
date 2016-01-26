@@ -16,7 +16,7 @@
 	'enableAjaxValidation'=>false,
 	'errorMessageCssClass' => 'text-error control-label'
 )); ?>
-<div class="panel panel-default" style="width:40%;">
+<div class="panel panel-default col-xs-12">
 		<div class="panel-heading">
 			<?php 
 				if($model->nombre!=""){

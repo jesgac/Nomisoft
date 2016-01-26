@@ -36,21 +36,7 @@ $this->breadcrumbs=array(
 			'name'=>'empresa_search',
 			'value'=>'$data->empresa->nombre_emp'
 		),
-		array(
-			'header'=>'Talla Camisa',
-			//'name'=>'camisa_search',
-			'value'=>'$data->talla->talla_camisa'
-		),
-		array(
-			'header'=>'Talla Pantalon',
-			//'name'=>'pantalon_search',
-			'value'=>'$data->talla->talla_pantalon'
-		),
-		array(
-			'header'=>'Talla Zapato',
-			//'name'=>'zapato_search',
-			'value'=>'$data->talla->talla_zapato'
-		),
+		
 		/*
 		'id_cargo',
 		'cod_banco',

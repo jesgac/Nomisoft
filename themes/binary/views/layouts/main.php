@@ -66,7 +66,6 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                             <li>
                                 <a href='index.php?r=hijos/admin'>Hijos</a>
                             </li>;
-                            ?>
                         </ul>
                       </li>
                     <li>
@@ -78,7 +77,6 @@ font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary squar
                         </li>
                     </ul>
                     </li>
-                    ;?>
                     <?php 
                      if (Yii::app()->user->getState('role') ==1||Yii::app()->user->getState('role') ==3) //Role
                      echo "

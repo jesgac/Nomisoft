@@ -31,6 +31,7 @@ class Obras extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nombre_obra, direccion, fech_ini, status', 'required'),
+			array('fech_fin', 'default', 'setOnEmpty'=>'null'),
 			array('status', 'numerical', 'integerOnly'=>true),
 			array('nombre_obra', 'length', 'max'=>45),
 			array('direccion', 'length', 'max'=>100),

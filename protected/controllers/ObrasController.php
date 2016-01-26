@@ -80,6 +80,13 @@ class ObrasController extends Controller
 		if(isset($_POST['Obras']))
 		{
 			$model->attributes=$_POST['Obras'];
+
+			if(empty($model->fech_fin)){
+			$fecha_pedazos = explode("-", $model->fech_ini);
+			$fecha_pedazos[0]+=5;
+			$model->fech_fin = implode("-", $fecha_pedazos);
+			}
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

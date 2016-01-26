@@ -105,8 +105,14 @@
 		
 
 		<?php 
+		$criteria=new CDbCriteria();
 
-		$model2 = Nomina::model()->findAllByAttributes(array('fecha'=>$model));
+		$criteria->condition='fecha=:fecha';
+		$criteria->params = array(':fecha'=>$model);
+		$criteria->with=array('obra');
+		$criteria->order='obra.nombre_obra';
+
+		$model2 = Nomina::model()->findAll($criteria);
 
 		//print_r($model2);
 		foreach ($model2 as $data): ?>

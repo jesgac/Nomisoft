@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Recibo</title>
@@ -24,6 +25,38 @@
 			border-top-color:black;
 			border-top-width: 1px;
 		}
+
+		.btn {
+		  background: #3498db;
+		  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+		  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+		  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+		  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+		  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+		  font-family: Arial;
+		  color: #ffffff;
+		  font-size: 14px;
+		  padding: 10px 20px 10px 20px;
+		  text-decoration: none;
+		}
+
+		.btn:hover {
+		  background: #3cb0fd;
+		  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+		  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+		  text-decoration: none;
+		}
+		@media print
+			{    
+		
+			    .no-print, .no-print *
+			    {
+			        display: none !important;
+			    }
+			}
 		td{
 			padding-top: 2px;
 			padding-bottom: 6px;
@@ -149,8 +182,11 @@
 			<td colspan="3" class="bold center"><?php echo date("d-m-Y") ?></td>				
 		</tr>
 	</table>
+	<br><center>
+<input type="button" onClick=" window.print();" class="btn no-print" name="Imprime" value="Imprimir">
 
 </body>
+
 
 </html>
 <?php
@@ -167,4 +203,5 @@
 
 	return $ano_diferencia;
 	}
+
 ?>

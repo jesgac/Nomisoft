@@ -2859,3 +2859,147 @@ Stack trace:
 REQUEST_URI=/nomisoft/index.php?r=Empleados/autocomplete&term=jon
 HTTP_REFERER=http://localhost/nomisoft/index.php?r=usuario/create
 ---
+2016/01/26 02:48:47 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 02:52:57 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 02:53:05 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 02:57:51 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:02:53 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:05:10 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:05:19 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:06:15 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:07:11 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:09:00 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:09:00 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php:450)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): NominaController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): NominaController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=nomina/update&id=5
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (450)
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (203)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:10:14 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:19:21 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:19:21 [error] [php] Undefined variable: inasistencia (C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php:452)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): NominaController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): NominaController->filterAccessControl()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=nomina/create
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (452)
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (118)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:20:10 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:20:10 [error] [php] Undefined variable: inasistencia (C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php:452)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): NominaController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): NominaController->filterAccessControl()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=nomina/create
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (452)
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (118)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:21:44 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (87)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:25:04 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:25:43 [warning] [application] Error al establecer unsafe al atributo "inasistencia" de "Deducciones".
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (172)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:31:28 [error] [php] Undefined variable: dias (C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php:461)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): NominaController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): NominaController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=nomina/update&id=6
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (461)
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (203)
+in C:\xampp\htdocs\Nomisoft\index.php (13)
+2016/01/26 03:31:57 [error] [php] Undefined variable: inasistencia (C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php:452)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): NominaController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): NominaController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): NominaController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): NominaController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\Nomisoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/nomisoft/index.php?r=nomina/update&id=6
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (452)
+in C:\xampp\htdocs\Nomisoft\protected\controllers\NominaController.php (203)
+in C:\xampp\htdocs\Nomisoft\index.php (13)

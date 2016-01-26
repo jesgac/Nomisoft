@@ -449,15 +449,16 @@ class NominaController extends Controller
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
 
-		if ($cargo->tipo_sueldo == 1){
-			$semana_mes = 7;
-		}else{
-			$semana_mes = 30;
-		}
-		$sueldo_diario = $cargo->sueldo / $semana_mes;
-		$inasistencia = $sueldo_diario * $dias;
-		return $inasistencia;
+			if ($cargo->tipo_sueldo == 1){
+				$semana_mes = 7;
+			}else{
+				$semana_mes = 30;
+			}
+			$sueldo_diario = $cargo->sueldo / $semana_mes;
+			$inasistencia = $sueldo_diario * $dias;
 
+		return $inasistencia;
+		
 	}
 
 	protected function asistencia($asistencia,$id){

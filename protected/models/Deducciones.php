@@ -12,12 +12,18 @@
 		{
 			return 'deducciones';
 		}
-		public function rules(){
-			$rules[] = array('sso,spf,lph','required');
-
-			return $rules;
-		}
-
+		public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
+		return array(
+			array('sso,spf,lph','required'),
+			array('sso,spf,lph,inasistencia', 'numerical'),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			//array('id, b_alimenticio, asistencia, feriado, sabado, horasextra_diurna, horasextras_nocturna', 'safe', 'on'=>'search'),
+		);
+	}
 		public function attributeLabels(){
 			return array(
 				'sso' => 'Seguro Social',

@@ -28,10 +28,10 @@ class NominaController extends Controller
 	{
 		if( Yii::app()->user->getState('role') ==1 ||  Yii::app()->user->getState('role') ==3 )
         {
-            $arr =array('create','update','pdf','reporte','recibo','admin','delete','view','imprimir');   // give all access to admin
+            $arr =array('create','update','pdf','reporte','recibo','admin','delete','view','imprimir','txt');   // give all access to admin
         }else{
         	if( Yii::app()->user->getState('role') ==2)
-        		$arr = array('admin','pdf','reporte','recibo','imprimir');
+        		$arr = array('admin','pdf','reporte','recibo','imprimir','txt');
         }
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -67,6 +67,16 @@ class NominaController extends Controller
         	'b'=>$b,
         	'c'=>$c,
 		));
+	}
+
+	public function actionTxt(){
+
+		$criteria = new CDbCriteria;
+		$criteria->with=array('empleado','persona');
+		$nomina = Nomina::model()->findAll();
+		$this->render('view',array(
+			'a'=>$a,
+        ));
 	}
 
 	/**

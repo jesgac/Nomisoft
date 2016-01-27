@@ -1,16 +1,16 @@
 <?php
 /* @var $this NominaController */
-/* @var $model Nomina */
+/* @var $a Nomina */
 
 $this->breadcrumbs=array(
 	'Nomina'=>array('admin'),
-	$model->persona->nombre." ".$model->persona->apellido,
+	$a->persona->nombre." ".$a->persona->apellido,
 );
 
 $this->menu=array(
 	array('label'=>'Nueva Nomina', 'url'=>array('create')),
-	array('label'=>'Modificar Nomina', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Borrar Nomina', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Esta seguro que desea borrar este registro?')),
+	array('label'=>'Modificar Nomina', 'url'=>array('update', 'id'=>$a->id)),
+	array('label'=>'Borrar Nomina', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$a->id),'confirm'=>'Esta seguro que desea borrar este registro?')),
 	array('label'=>'Gestionar Nominas', 'url'=>array('admin')),
 );
 ?>
@@ -18,11 +18,12 @@ $this->menu=array(
 <div class="block-fluid">                        
 	<div class="panel panel-default">
     <div class="panel-heading">
-        Detalle Nomina: <?php echo $model->persona->nombre.' '.$model->persona->apellido;?>
+        Detalle Nomina: <?php echo $a->persona->nombre.' '.$a->persona->apellido;?>
     </div>
     <div class="panel-body">
         <?php $this->widget('zii.widgets.CDetailView', array(
-			'data'=>$model,
+			'data'=>$a,
+
 			'htmlOptions'=>array('class'=>'table table-striped'),
 			'attributes'=>array(
 				array(
@@ -34,37 +35,37 @@ $this->menu=array(
 		array(
 			'label'=>'Bono Alimenticio',
 			'value'=>function($data){
-            	return number_format($data->asig->b_alimenticio, 2,',','.')." Bs.";
+            	return number_format($data->b_alimenticio($data->asig->b_alimenticio), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Bono Asistencia',
 			'value'=>function($data){
-            	return number_format($data->asig->asistencia, 2,',','.')." Bs.";
+            	return number_format($data->asistencia($data->asig->asistencia,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Dias Feriados',
 			'value'=>function($data){
-            	return number_format($data->asig->feriado, 2,',','.')." Bs.";
+            	return number_format($data->feriado($data->asig->feriado,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Sabados Trabajados',
 			'value'=>function($data){
-            	return number_format($data->asig->sabado, 2,',','.')." Bs.";
+            	return number_format($data->sabado($data->asig->sabado,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Horas Extras Diurnas',
 			'value'=>function($data){
-            	return number_format($data->asig->horasextra_diurna, 2,',','.')." Bs.";
+            	return number_format($data->hdiurnas($data->asig->horasextra_diurna,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Horas Extras Nocturnas',
 			'value'=>function($data){
-            	return number_format($data->asig->horasextras_nocturna, 2,',','.')." Bs.";
+            	return number_format($data->hnocturnas($data->asig->horasextras_nocturna,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
@@ -88,27 +89,28 @@ $this->menu=array(
 		array(
 			'label'=>'Seguro Social Obligatorio',
 			'value'=>function($data){
-            	return number_format($data->deduc->sso, 2,',','.')." Bs.";
+            	return number_format($data->sso($data->deduc->sso,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Seguro Paro Forzoso',
 			'value'=>function($data){
-            	return number_format($data->deduc->spf, 2,',','.')." Bs.";
+            	return number_format($data->spf($data->deduc->spf,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Ley de Política Habitacional',
 			'value'=>function($data){
-            	return number_format($data->deduc->lph, 2,',','.')." Bs.";
+            	return number_format($data->lph($data->deduc->lph,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
 		array(
 			'label'=>'Inasistencia',
 			'value'=>function($data){
-            	return number_format($data->deduc->inasistencia, 2,',','.')." Bs.";
+            	return number_format($data->inasistencia($data->deduc->inasistencia,$data->empleado->id), 2,',','.')." Bs.";
         	},
 		),
+
 		array(
 			'label'=>'Descuento',
 			'value'=>function($data){
@@ -144,4 +146,4 @@ $this->menu=array(
     </div>
 </div>
 
-<?php echo CHtml::link('Imprimir Recibo',array('recibo','id'=>$model->id)); ?>
+<?php echo CHtml::link('Imprimir Recibo',array('recibo','id'=>$a->id)); ?>

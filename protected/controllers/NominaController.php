@@ -58,9 +58,14 @@ class NominaController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{	
+		$a=$this->loadModel($id);
+		$b = Asignaciones::model()->findByAttributes(array('id'=>$a->id_asignacion));
+		$c = Deducciones::model()->findByAttributes(array('id'=>$a->id_deduccion));
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'a'=>$a,
+        	'b'=>$b,
+        	'c'=>$c,
 		));
 	}
 
@@ -95,31 +100,21 @@ class NominaController extends Controller
         
         if($valid)
         {
-       $b->feriado = $this->feriado($b->feriado,$a->id_empleado);
-       $b->sabado = $this->sabado($b->sabado,$a->id_empleado);
-       $b->b_alimenticio = $this->b_alimenticio($b->b_alimenticio,$a->id_empleado);
-       $b->horasextra_diurna = $this->hdiurnas($b->horasextra_diurna,$a->id_empleado);
-       $b->horasextras_nocturna = $this->hnocturnas($b->horasextras_nocturna,$a->id_empleado);
-       $b->asistencia = $this->asistencia($b->asistencia,$a->id_empleado);
-       
-       $a->total_asig = $b->b_alimenticio +
-       $b->asistencia + 
-       $b->horasextra_diurna + 
-       $b->horasextras_nocturna + 
-       $b->sabado + 
-       $b->feriado + 
+          
+       $a->total_asig = $a->b_alimenticio($b->b_alimenticio,$a->id_empleado) +
+       $a->asistencia($b->asistencia,$a->id_empleado) + 
+       $a->hdiurnas($b->horasextra_diurna,$a->id_empleado) + 
+       $a->hnocturnas($b->horasextras_nocturna,$a->id_empleado) + 
+       $a->sabado($b->sabado,$a->id_empleado) + 
+       $a->feriado($b->feriado,$a->id_empleado) + 
        $a->prestamos + 
        $a->vaciado +
        $a->otros;
 
-       $c->sso = $this->sso($c->sso,$a->id_empleado);
-       $c->spf = $this->spf($c->spf,$a->id_empleado);
-       $c->lph = $this->lph($c->lph,$a->id_empleado);
-       $c->inasistencia = $this->inasistencia($c->inasistencia,$a->id_empleado);
-       $a->total_deduc = $c->sso +
-       $c->spf +
-       $c->lph +
-       $c->inasistencia +
+       $a->total_deduc = $a->sso($c->sso,$a->id_empleado) +
+       $a->spf($c->spf,$a->id_empleado) +
+       $a->lph($c->lph,$a->id_empleado) +
+       $a->inasistencia($c->inasistencia,$a->id_empleado) +
        $a->descuento;
 
        $empleado = Empleados::model()->findByAttributes(array('id'=>$a->id_empleado));
@@ -171,8 +166,6 @@ class NominaController extends Controller
        $b->attributes=$_POST['Asignaciones'];
        $c->attributes=$_POST['Deducciones'];
        
-
-
         // validate BOTH $a and $b
         $valid=$a->validate();
         $valid=$b->validate() && $valid;
@@ -180,31 +173,21 @@ class NominaController extends Controller
         
         if($valid)
         {
-       $b->feriado = $this->feriado($b->feriado,$a->id_empleado);
-       $b->sabado = $this->sabado($b->sabado,$a->id_empleado);
-       $b->b_alimenticio = $this->b_alimenticio($b->b_alimenticio,$a->id_empleado);
-       $b->horasextra_diurna = $this->hdiurnas($b->horasextra_diurna,$a->id_empleado);
-       $b->horasextras_nocturna = $this->hnocturnas($b->horasextras_nocturna,$a->id_empleado);
-       $b->asistencia = $this->asistencia($b->asistencia,$a->id_empleado);
-       
-       $a->total_asig = $b->b_alimenticio +
-       $b->asistencia + 
-       $b->horasextra_diurna + 
-       $b->horasextras_nocturna + 
-       $b->sabado + 
-       $b->feriado + 
+          
+       $a->total_asig = $this->b_alimenticio($b->b_alimenticio,$a->id_empleado) +
+       $this->asistencia($b->asistencia,$a->id_empleado) + 
+       $this->hdiurnas($b->horasextra_diurna,$a->id_empleado) + 
+       $this->hnocturnas($b->horasextras_nocturna,$a->id_empleado) + 
+       $this->sabado($b->sabado,$a->id_empleado) + 
+       $this->feriado($b->feriado,$a->id_empleado) + 
        $a->prestamos + 
        $a->vaciado +
        $a->otros;
 
-       $c->sso = $this->sso($c->sso,$a->id_empleado);
-       $c->spf = $this->spf($c->spf,$a->id_empleado);
-       $c->lph = $this->lph($c->lph,$a->id_empleado);
-       $c->inasistencia = $this->inasistencia($c->inasistencia,$a->id_empleado);
-       $a->total_deduc = $c->sso +
-       $c->spf +
-       $c->lph +
-       $c->inasistencia +
+       $a->total_deduc = $this->sso($c->sso,$a->id_empleado) +
+       $this->spf($c->spf,$a->id_empleado) +
+       $this->lph($c->lph,$a->id_empleado) +
+       $this->inasistencia($c->inasistencia,$a->id_empleado) +
        $a->descuento;
 
        $empleado = Empleados::model()->findByAttributes(array('id'=>$a->id_empleado));
@@ -324,163 +307,7 @@ class NominaController extends Controller
 		}
 	}
 
-	protected function feriado($dias,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>4));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		
-		if ($cargo->tipo_sueldo == 1){
-			$semana_mes = 7;
-		}else{
-			$semana_mes = 30;
-		}
-		$sueldo_diario = $cargo->sueldo / $semana_mes;
-		$feriado = (($sueldo_diario* $concepto->bono) + $sueldo_diario) * $dias;
-		return $feriado;
-	}
-
-	protected function sabado($dias,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>5));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		
-		if ($cargo->tipo_sueldo == 1){
-			$semana_mes = 7;
-		}else{
-			$semana_mes = 30;
-		}
-		$sueldo_diario = $cargo->sueldo / $semana_mes;
-		$sabado = (($sueldo_diario* $concepto->bono) + $sueldo_diario) * $dias;
-		return $sabado;
-	}
-
-	protected function b_alimenticio($dias){
-		$ut = Conceptos::model()->findByAttributes(array('tipo_bono'=>1));
-		$alimenticio = Conceptos::model()->findByAttributes(array('tipo_bono'=>6));
-		$b_alimenticio = $ut->bono * $alimenticio->bono * $dias;
-		return  $b_alimenticio;
-
-	}
-
-	protected function hdiurnas($horas,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>2));
-		if ($cargo->tipo_sueldo == 1){
-			$semana_mes = 7;
-		}else{
-			$semana_mes = 30;
-		}
-		$sueldo_diario = $cargo->sueldo / $semana_mes; // determinar el seuldo diario
-		$sueldo_horas =  $sueldo_diario / 8; //determinar la hora de trabajo
-		
-
-		$hdiurnas = (($sueldo_horas * $concepto->bono)+ $sueldo_horas) * $horas;
-		return $hdiurnas;
-
-	}
-
-	protected function hnocturnas($horas,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>3));
-		if ($cargo->tipo_sueldo == 1){
-			$semana_mes = 7;
-		}else{
-			$semana_mes = 30;
-		}
-		$sueldo_diario = $cargo->sueldo / $semana_mes; // determinar el seuldo diario
-		$sueldo_horas =  $sueldo_diario / 7; //determinar la hora de trabajo
-		
-		$hdiurnas = (((($sueldo_horas * $concepto->bono) + $sueldo_horas) * 0.35) + (($sueldo_horas * $concepto->bono) + $sueldo_horas))*$horas;
-		return $hdiurnas;
-
-	}
-
-	protected function sso($seguro,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>7));
-		
-		if ($seguro == 0)
-			return $seguro;
-		else {
-			if ($cargo->tipo_sueldo == 1){
-				$sueldo= $cargo->sueldo;
-			}else{
-				$sueldo= $cargo->sueldo /2;
-			}
-			$sso = $sueldo* ($concepto->bono /100);
-			return $sso;
-		}
-	}
-
-	protected function spf($seguro,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>8));
-		if ($seguro == 0)
-			return $seguro;
-		else {
-			if ($cargo->tipo_sueldo == 1){
-				$sueldo= $cargo->sueldo;
-			}else{
-				$sueldo= $cargo->sueldo /2;
-			}
-			$spf = $sueldo* ($concepto->bono /100);
-			return $spf;
-		}
-	}
-
-	protected function lph($seguro,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>9));
-		if ($seguro == 0)
-			return $seguro;
-		else {
-			if ($cargo->tipo_sueldo == 1){
-				$sueldo= $cargo->sueldo;
-			}else{
-				$sueldo= $cargo->sueldo /2;
-			}
-			$lph = $sueldo* ($concepto->bono /100);
-			return $lph;
-		}
-	}
-
-	protected function inasistencia($dias,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-
-			if ($cargo->tipo_sueldo == 1){
-				$semana_mes = 7;
-			}else{
-				$semana_mes = 30;
-			}
-			$sueldo_diario = $cargo->sueldo / $semana_mes;
-			$inasistencia = $sueldo_diario * $dias;
-
-		return $inasistencia;
-		
-	}
-
-	protected function asistencia($asistencia,$id){
-		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		if ($asistencia == 0)
-			return $asistencia;
-		else {
-			if ($cargo->tipo_sueldo == 1){
-				$semana_mes = 7;
-			}else{
-				$semana_mes = 30;
-			}
-			$sueldo_diario = $cargo->sueldo / $semana_mes;
-			$asistencia = $sueldo_diario * 6;
-			return $asistencia;
-		}
-	}
+	
 
 	public function actionAutocomplete($term) 
 {
@@ -519,20 +346,25 @@ class NominaController extends Controller
 
 public function actionRecibo($id)
 {
-	$this->renderPartial('recibo',array(
-		'model'=>$this->loadModel($id),
-	));
+		$a=$this->loadModel($id);
+		$b = Asignaciones::model()->findByAttributes(array('id'=>$a->id_asignacion));
+		$c = Deducciones::model()->findByAttributes(array('id'=>$a->id_deduccion));
+		$this->renderPartial('recibo',array(
+			'a'=>$a,
+        	'b'=>$b,
+        	'c'=>$c,
+		));
 }
 
 public function actionImprimir()
 	{
 		$model= new Imprimir;
-	    if(isset($_POST['Imprimir']))
+			    if(isset($_POST['Imprimir']))
 	    {
 	        $model->attributes=$_POST['Imprimir'];
 	        if($model->validate())
 	        {
-	        	$this->renderPartial('reporte',array('model'=>$model->fecha));				
+	        	$this->renderPartial('reporte',array('model'=>$model->fecha,));				
 		    	return true;
 		    }
 	    }

@@ -105,5 +105,166 @@
 	{
 		return parent::model($className);
 	}
+
+	public function feriado($dias,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>4));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		
+		if ($cargo->tipo_sueldo == 1){
+			$semana_mes = 7;
+		}else{
+			$semana_mes = 30;
+		}
+		$sueldo_diario = $cargo->sueldo / $semana_mes;
+		$feriado = (($sueldo_diario* $concepto->bono) + $sueldo_diario) * $dias;
+		return $feriado;
+	}
+
+	public function sabado($dias,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>5));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		
+		if ($cargo->tipo_sueldo == 1){
+			$semana_mes = 7;
+		}else{
+			$semana_mes = 30;
+		}
+		$sueldo_diario = $cargo->sueldo / $semana_mes;
+		$sabado = (($sueldo_diario* $concepto->bono) + $sueldo_diario) * $dias;
+		return $sabado;
+	}
+
+	public function b_alimenticio($dias){
+		$ut = Conceptos::model()->findByAttributes(array('tipo_bono'=>1));
+		$alimenticio = Conceptos::model()->findByAttributes(array('tipo_bono'=>6));
+		$b_alimenticio = $ut->bono * $alimenticio->bono * $dias;
+		return  $b_alimenticio;
+
+	}
+
+	public function hdiurnas($horas,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>2));
+		if ($cargo->tipo_sueldo == 1){
+			$semana_mes = 7;
+		}else{
+			$semana_mes = 30;
+		}
+		$sueldo_diario = $cargo->sueldo / $semana_mes; // determinar el seuldo diario
+		$sueldo_horas =  $sueldo_diario / 8; //determinar la hora de trabajo
+		
+
+		$hdiurnas = (($sueldo_horas * $concepto->bono)+ $sueldo_horas) * $horas;
+		return $hdiurnas;
+
+	}
+
+	public function hnocturnas($horas,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>3));
+		if ($cargo->tipo_sueldo == 1){
+			$semana_mes = 7;
+		}else{
+			$semana_mes = 30;
+		}
+		$sueldo_diario = $cargo->sueldo / $semana_mes; // determinar el seuldo diario
+		$sueldo_horas =  $sueldo_diario / 7; //determinar la hora de trabajo
+		
+		$hdiurnas = (((($sueldo_horas * $concepto->bono) + $sueldo_horas) * 0.35) + (($sueldo_horas * $concepto->bono) + $sueldo_horas))*$horas;
+		return $hdiurnas;
+
+	}
+
+	public function sso($seguro,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>7));
+		
+		if ($seguro == 0)
+			return $seguro;
+		else {
+			if ($cargo->tipo_sueldo == 1){
+				$sueldo= $cargo->sueldo;
+			}else{
+				$sueldo= $cargo->sueldo /2;
+			}
+			$sso = $sueldo* ($concepto->bono /100);
+			return $sso;
+		}
+	}
+
+	public function spf($seguro,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>8));
+		if ($seguro == 0)
+			return $seguro;
+		else {
+			if ($cargo->tipo_sueldo == 1){
+				$sueldo= $cargo->sueldo;
+			}else{
+				$sueldo= $cargo->sueldo /2;
+			}
+			$spf = $sueldo* ($concepto->bono /100);
+			return $spf;
+		}
+	}
+
+	public function lph($seguro,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>9));
+		if ($seguro == 0)
+			return $seguro;
+		else {
+			if ($cargo->tipo_sueldo == 1){
+				$sueldo= $cargo->sueldo;
+			}else{
+				$sueldo= $cargo->sueldo /2;
+			}
+			$lph = $sueldo* ($concepto->bono /100);
+			return $lph;
+		}
+	}
+
+	public function inasistencia($dias,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+
+			if ($cargo->tipo_sueldo == 1){
+				$semana_mes = 7;
+			}else{
+				$semana_mes = 30;
+			}
+			$sueldo_diario = $cargo->sueldo / $semana_mes;
+			$inasistencia = $sueldo_diario * $dias;
+
+		return $inasistencia;
+		
+	}
+
+	public function asistencia($asistencia,$id){
+		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
+		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		if ($asistencia == 0)
+			return $asistencia;
+		else {
+			if ($cargo->tipo_sueldo == 1){
+				$semana_mes = 7;
+			}else{
+				$semana_mes = 30;
+			}
+			$sueldo_diario = $cargo->sueldo / $semana_mes;
+			$asistencia = $sueldo_diario * 6;
+			return $asistencia;
+		}
+	}
+
+
 }
+
 ?>

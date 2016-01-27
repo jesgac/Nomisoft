@@ -108,6 +108,9 @@ return array(
     array('id'=>'4', 'title'=>'Feriado'),
     array('id'=>'5', 'title'=>'Sabado'),
     array('id'=>'6', 'title'=>'Bono Alimenticio'),
+    array('id'=>'7', 'title'=>'Seguro Social Obligatorio'),
+    array('id'=>'8', 'title'=>'Seguro Paro Forzoso'),
+    array('id'=>'9', 'title'=>'Fondo de Ahorro Obligatorio para la Vivienda'),
 );
 }
 }

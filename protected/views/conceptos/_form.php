@@ -52,7 +52,10 @@
 							'3'=>'HE Nocturna',
 							'4'=>'Feriado',
 							'5'=>'Sabado',
-							'6'=>'Bono Alimenticio'
+							'6'=>'Bono Alimenticio',
+							'7'=>'SSO',
+							'8'=>'SPF',
+							'9'=>'FAOV',
 						),array('class'=>'form-control','title'=>'Indique el Concepto')); ?>
 					<?php echo  $model->hasErrors('tipo_bono') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>	
 					</div>

@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Conceptos'=>array('admin'),
-	$model->id,
+	tipo($model),
 );
 
 $this->menu=array(
@@ -19,7 +19,7 @@ $this->menu=array(
 <div class="block-fluid">                        
 	<div class="panel panel-default">
     <div class="panel-heading">
-        <?php echo $model->tipo_bono;?>
+        <?php echo tipo($model);?>
     </div>
     <div class="panel-body">
         <?php $this->widget('zii.widgets.CDetailView', array(
@@ -27,9 +27,39 @@ $this->menu=array(
 			'htmlOptions'=>array('class'=>'table table-striped'),
 			'attributes'=>array(
 				'Fecha',
-			'tipo_bono',
+			array(
+            //'id'=>'tipo_id',
+            'label'=>'Tipo de Concepto',
+            'value'=>tipo($model),
+               
+        ),
 			'bono',
 			),
 		)); ?>
     </div>
 </div>
+<?php 
+function tipo($data){
+	if($data->tipo_bono=='1')
+                    return "Unidad Tributaria";
+                if($data->tipo_bono=='2')
+                    return "Horas Extras Diurna";
+                if($data->tipo_bono=='3')
+                    return "Horas Extras Nocturna";
+                if($data->tipo_bono=='4')
+                    return "Feriado";
+                if($data->tipo_bono=='5')
+                    return "Sabado";
+                if($data->tipo_bono=='6')
+                    return "Bono Alimentacion";
+                if($data->tipo_bono=='7')
+                    return "Seguro Social Obligatorio";
+                if($data->tipo_bono=='8')
+                    return "Seguro Paro Forzoso";
+                if($data->tipo_bono=='9')
+                    return "Fondo de Ahorro Obligatorio para la Vivienda";
+
+}
+
+
+ ?>

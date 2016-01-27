@@ -400,15 +400,17 @@ class NominaController extends Controller
 	protected function sso($seguro,$id){
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>7));
+		
 		if ($seguro == 0)
 			return $seguro;
 		else {
 			if ($cargo->tipo_sueldo == 1){
-				$sueldo_mensual = $cargo->sueldo * 52 / 12;
+				$sueldo= $cargo->sueldo;
 			}else{
-				$sueldo_mensual = $cargo->sueldo;
+				$sueldo= $cargo->sueldo /2;
 			}
-			$sso = $sueldo_mensual * 0.04;
+			$sso = $sueldo* ($concepto->bono /100);
 			return $sso;
 		}
 	}
@@ -416,15 +418,16 @@ class NominaController extends Controller
 	protected function spf($seguro,$id){
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>8));
 		if ($seguro == 0)
 			return $seguro;
 		else {
 			if ($cargo->tipo_sueldo == 1){
-				$sueldo_mensual = $cargo->sueldo * 52 / 12;
+				$sueldo= $cargo->sueldo;
 			}else{
-				$sueldo_mensual = $cargo->sueldo;
+				$sueldo= $cargo->sueldo /2;
 			}
-			$spf = $sueldo_mensual * 0.005;
+			$spf = $sueldo* ($concepto->bono /100);
 			return $spf;
 		}
 	}
@@ -432,15 +435,16 @@ class NominaController extends Controller
 	protected function lph($seguro,$id){
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>9));
 		if ($seguro == 0)
 			return $seguro;
 		else {
 			if ($cargo->tipo_sueldo == 1){
-				$sueldo_mensual = $cargo->sueldo * 52 / 12;
+				$sueldo= $cargo->sueldo;
 			}else{
-				$sueldo_mensual = $cargo->sueldo;
+				$sueldo= $cargo->sueldo /2;
 			}
-			$lph = $sueldo_mensual * 0.01;
+			$lph = $sueldo* ($concepto->bono /100);
 			return $lph;
 		}
 	}

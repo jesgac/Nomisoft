@@ -44,6 +44,12 @@ $this->menu=array(
                     return "Sabado";
                 if($data->tipo_bono=='6')
                     return "Bono Alimentacion";
+                if($data->tipo_bono=='7')
+                    return "Seguro Social Obligatorio";
+                if($data->tipo_bono=='8')
+                    return "Seguro Paro Forzoso";
+                if($data->tipo_bono=='9')
+                    return "Fondo de Ahorro Obligatorio para la Vivienda";
                 
             },
             /*'filter'=>CHtml::dropDownList('Cargos[tipo_sueldo]', '', 

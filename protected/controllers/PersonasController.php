@@ -69,6 +69,7 @@ class PersonasController extends Controller
 		));
 	}
 
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -141,12 +142,32 @@ class PersonasController extends Controller
 		));
 	}
 
-	public function actionFicha($id)
+	/*public function actionFicha($id)
 	{
 		$this->renderPartial('ficha',array(
 			'model'=>$this->loadModel($id),
 		));
-	}
+	}*/
+
+	public function actionFicha($id)
+{
+    if (Yii::app()->request->isAjaxRequest)
+    {
+        //outputProcessing = true because including css-files ...
+        $this->renderPartial('ficha', 
+            array(
+               'model'=>$this->loadModel($id),
+             ),false,true);
+        //js-code to open the dialog    
+          if (!empty($_GET['asDialog'])) 
+            echo CHtml::script('$("#dlg-address-view").dialog("open")');
+        Yii::app()->end();
+    }
+    else
+        $this->render('ficha', array(
+           'model'=>$this->loadModel($id),
+         ));
+}
 	/**
 	 * Manages all models.
 	 */

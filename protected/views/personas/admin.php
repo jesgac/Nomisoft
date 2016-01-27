@@ -61,6 +61,22 @@ $this->menu=array(
       </a>
       <a href="index.php?r=personas/create" class="list-group-item">Nueva Persona</a>
 </div>
+<?php
+  //the dialog
+$this->beginWidget('zii.widgets.jui.CJuiDialog', array( 
+'id'=>'dlg-address-view',
+'options'=>array(
+    'title'=>'',
+    'autoOpen'=>false, //important!
+    'modal'=>false,
+    'width'=>550,
+    'height'=>470,
+),
+));
+?>
+<div id="id_view"></div>
+<?php $this->endWidget();?>
+
 <?php 
   function viewVisible(){
     if (Yii::app()->user->getState('role') ==2)
@@ -92,6 +108,7 @@ $this->menu=array(
                 'imageUrl'=>'',
                 'options'=>array('class'=>'fa fa-search  fa-fw'),
             ),
+            
             'update'=>array(
                 'label'=>'',
                 'imageUrl'=>'',
@@ -102,11 +119,25 @@ $this->menu=array(
                 'imageUrl'=>'',
                 'options'=>array('class'=>'fa fa-trash-o  fa-fw'),
             ),
-            'ficha'=>array(
+            /*'ficha'=>array(
                 'label'=>'',
                 'imageUrl'=>'',
                 'options'=>array('class'=>'fa fa-file-o  fa-fw'),
                 'url'=>'Yii::app()->createUrl("personas/ficha", array("id"=>$data->id))',
+            ),*/
+            'ficha'=>array(
+              'url'=>'Yii::app()->createUrl("personas/ficha", array("id"=>$data->id,"asDialog"=>1))',
+              'label'=>'',
+              'imageUrl'=>'',
+              'options'=>array(  
+                'ajax'=>array(
+                  'type'=>'POST',
+                  // ajax post will use 'url' specified above 
+                  'url'=>"js:$(this).attr('href')", 
+                  'update'=>'#id_view',
+                ),
+                'class'=>'fa fa-file-o fa-fw'
+              ),
             ),
         );
                    

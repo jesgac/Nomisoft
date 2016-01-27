@@ -146,4 +146,4 @@ $this->menu=array(
     </div>
 </div>
 
-<?php echo CHtml::link('Imprimir Recibo',array('recibo','id'=>$a->id)); ?>
+

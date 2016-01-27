@@ -8,6 +8,8 @@
     <link href="<?php echo Yii::app()->baseUrl; ?>/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo Yii::app()->baseUrl; ?>/css/font-awesome.css" rel="stylesheet" />
+
+    
         <!-- CUSTOM STYLES-->
     <link href="<?php echo Yii::app()->baseUrl; ?>/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->

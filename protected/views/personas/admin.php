@@ -69,8 +69,8 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
     'title'=>'',
     'autoOpen'=>false, //important!
     'modal'=>false,
-    'width'=>550,
-    'height'=>470,
+    'width'=>640,
+    'height'=>640,
 ),
 ));
 ?>
@@ -94,11 +94,19 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
               'options'=>array('class'=>'fa fa-pencil  fa-fw'),
           ),
           'ficha'=>array(
+              'url'=>'Yii::app()->createUrl("personas/ficha", array("id"=>$data->id,"asDialog"=>1))',
               'label'=>'',
               'imageUrl'=>'',
-              'options'=>array('class'=>'fa fa-file-o  fa-fw'),
-              'url'=>'Yii::app()->createUrl("personas/ficha", array("id"=>$data->id))',
-          ),
+              'options'=>array(  
+                'ajax'=>array(
+                  'type'=>'POST',
+                  // ajax post will use 'url' specified above 
+                  'url'=>"js:$(this).attr('href')", 
+                  'update'=>'#id_view',
+                ),
+                'class'=>'fa fa-file-o fa-fw'
+              ),
+            ),
             
         );
     else

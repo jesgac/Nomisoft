@@ -86,16 +86,41 @@ $this->menu=array(
 	  <a href="index.php?r=nomina/create" class="list-group-item">Nueva Nómina</a>
 	  <a href="index.php?r=nomina/imprimir" class="list-group-item">Imprimir Reporte</a>
 </div>
+
+<?php
+  //the dialog
+$this->beginWidget('zii.widgets.jui.CJuiDialog', array( 
+'id'=>'dlg-address-view',
+'options'=>array(
+    'title'=>'',
+    'autoOpen'=>false, //important!
+    'modal'=>false,
+    'width'=>640,
+    'height'=>640,
+),
+));
+?>
+<div id="id_view"></div>
+<?php $this->endWidget();?>
+
 <?php 
   function viewVisible(){
     if (Yii::app()->user->getState('role') ==2)
        return array(
           'ficha'=>array(
+              'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id,"asDialog"=>1))',
               'label'=>'',
               'imageUrl'=>'',
-              'options'=>array('class'=>'fa fa-file-o  fa-fw'),
-              'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id))',
-          ),
+              'options'=>array(  
+                'ajax'=>array(
+                  'type'=>'POST',
+                  // ajax post will use 'url' specified above 
+                  'url'=>"js:$(this).attr('href')", 
+                  'update'=>'#id_view',
+                ),
+                'class'=>'fa fa-file-o fa-fw'
+              ),
+            ),
         );
     
     else
@@ -115,12 +140,27 @@ $this->menu=array(
                 'imageUrl'=>'',
                 'options'=>array('class'=>'fa fa-trash-o  fa-fw'),
             ),
-            'ficha'=>array(
+            /*'ficha'=>array(
                 'label'=>'',
                 'imageUrl'=>'',
                 'options'=>array('class'=>'fa fa-file-o  fa-fw'),
                 'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id))',
+            ),*/
+            'ficha'=>array(
+              'url'=>'Yii::app()->createUrl("nomina/recibo", array("id"=>$data->id,"asDialog"=>1))',
+              'label'=>'',
+              'imageUrl'=>'',
+              'options'=>array(  
+                'ajax'=>array(
+                  'type'=>'POST',
+                  // ajax post will use 'url' specified above 
+                  'url'=>"js:$(this).attr('href')", 
+                  'update'=>'#id_view',
+                ),
+                'class'=>'fa fa-file-o fa-fw'
+              ),
             ),
+
             
         ); 
         

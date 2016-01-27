@@ -354,7 +354,7 @@ class NominaController extends Controller
 }
 
 
-public function actionRecibo($id)
+/*public function actionRecibo($id)
 {
 		$a=$this->loadModel($id);
 		$b = Asignaciones::model()->findByAttributes(array('id'=>$a->id_asignacion));
@@ -364,7 +364,41 @@ public function actionRecibo($id)
         	'b'=>$b,
         	'c'=>$c,
 		));
+}*/
+
+public function actionRecibo($id)
+{
+    if (Yii::app()->request->isAjaxRequest)
+    {
+        //outputProcessing = true because including css-files ...
+        $a=$this->loadModel($id);
+		$b = Asignaciones::model()->findByAttributes(array('id'=>$a->id_asignacion));
+		$c = Deducciones::model()->findByAttributes(array('id'=>$a->id_deduccion));
+        $this->renderPartial('recibo', 
+            array(
+	            'a'=>$a,
+		        'b'=>$b,
+		        'c'=>$c,
+             ),false,true);
+        //js-code to open the dialog    
+          if (!empty($_GET['asDialog'])) 
+            echo CHtml::script('$("#dlg-address-view").dialog("open")');
+        Yii::app()->end();
+    }
+    else
+        $this->render('ficha', array(
+           'model'=>$this->loadModel($id),
+         ));
 }
+
+
+
+
+
+
+
+
+
 
 public function actionImprimir()
 	{
@@ -381,6 +415,8 @@ public function actionImprimir()
 	    $this->render('imprimir',array('model'=>$model));
 
 	}
+
+
 
 
 }

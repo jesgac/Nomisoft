@@ -4,80 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Recibo</title>
-	<style>
-		body{
-			font-family: Helvetica;
-		}
-		.btn {
-		  background: #3498db;
-		  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-		  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-		  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-		  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-		  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-		  font-family: Arial;
-		  color: #ffffff;
-		  font-size: 14px;
-		  padding: 10px 20px 10px 20px;
-		  text-decoration: none;
-		}
-
-		.btn:hover {
-		  background: #3cb0fd;
-		  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-		  text-decoration: none;
-		}
-		@media print
-			{    
-		
-			    .no-print, .no-print *
-			    {
-			        display: none !important;
-			    }
-			}
-		table{
-
-			font-size:10px;
-			border-collapse: collapse;
-			border-left-style: solid;
-			border-left-color:black;
-			border-left-width: 1px;
-			border-bottom-style: solid;
-			border-bottom-color:black;
-			border-bottom-width: 1px;
-			border-right-style: solid;
-			border-right-color:black;
-			border-right-width: 1px;
-			border-top-style: solid;
-			border-top-color:black;
-			border-top-width: 1px;
-		}
-		td{
-			padding: 2px;
-		}
-		.bold{
-			font-weight: bold;
-		}
-		.center{
-			text-align: center;
-		}
-		.right{
-			text-align: right;
-		}
-		.no-border{
-			border-style: none;
-		}
-	</style>
+	<link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet" />
 </head>
 <body>
-
-<div>
+<div id="muestra"> 
+	
 	<center>
-	<table border="1">
+	<table border="1" class="reporte helvetica">
 		<tr style="font-size:14px;">
 			<td colspan="2" class="bold no-border"><?php echo $a->empresa->nombre_emp; ?></td>
 			<td colspan="1" class="bold right no-border">R.I.F. No.</td>
@@ -193,7 +126,7 @@
 		<tr><td colspan="6" class="no-border"> </td></tr>
 	</table>
 	<br><hr><br>
-	<table border="1">
+	<table border="1" class="reporte helvetica">
 		<tr style="font-size:14px;">
 			<td colspan="2" class="bold no-border"><?php echo $a->empresa->nombre_emp; ?></td>
 			<td colspan="1" class="bold right no-border">R.I.F. No.</td>
@@ -308,11 +241,26 @@
 		</tr>
 		<tr><td colspan="6" class="no-border"> </td></tr>
 	</table>
-	
-	<br><input type="button" onClick=" window.print();" class="btn no-print" name="Imprime" value="Imprimir">
 	</div>
+
+	<center><br><input type="button" value="Imprimir" onclick="javascript:imprSelec('muestra')" class="btn no-print" />
 </body>
+
+</html>
+ 
+<script type="text/javascript">
+	function imprSelec(muestra)
+	{var recibo=document.getElementById(muestra);
+		var ventimp=window.open(' ','popimpr');
+		ventimp.document.write('<html><head><title>Print it!</title><link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet"></head><body>');
+		ventimp.document.write(recibo.innerHTML);
+		ventimp.document.close();
+		ventimp.print();
+		ventimp.close();}
+
+</script>
 <?php
+
 function lunes($date){
 	$fecha = new DateTime($date);
 	while (!isset($lunes)){
@@ -331,5 +279,3 @@ function lunes($date){
 
 
 
-
-</html>

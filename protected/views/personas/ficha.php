@@ -4,82 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Ficha</title>
-	<style>
-		body{
-			font-family: Helvetica;
-		}
-		table{
-
-			font-size:10px;
-			border-collapse: collapse;
-			border-left-style: solid;
-			border-left-color:black;
-			border-left-width: 1px;
-			border-bottom-style: solid;
-			border-bottom-color:black;
-			border-bottom-width: 1px;
-			border-right-style: solid;
-			border-right-color:black;
-			border-right-width: 1px;
-			border-top-style: solid;
-			border-top-color:black;
-			border-top-width: 1px;
-		}
-
-		.btn {
-		  background: #3498db;
-		  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-		  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-		  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-		  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-		  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-		  font-family: Arial;
-		  color: #ffffff;
-		  font-size: 14px;
-		  padding: 10px 20px 10px 20px;
-		  text-decoration: none;
-		}
-
-		.btn:hover {
-		  background: #3cb0fd;
-		  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-		  text-decoration: none;
-		}
-		@media print
-			{    
-		
-			    .no-print, .no-print *
-			    {
-			        display: none !important;
-			    }
-			}
-		td{
-			padding-top: 2px;
-			padding-bottom: 6px;
-		}
-		.bold{
-			font-weight: bold;
-		}
-		.center{
-			text-align: center;
-		}
-		.right{
-			text-align: right;
-		}
-		.no-border{
-			border-style: none;
-		}
-	</style>
+	<link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet" />
+	
 </head>
 <body>
 
-<div id="muestra"> 
+<div id="muestra" class="helvetica">
+
 	<center>
-	<table border="0" class="no-border">
+	<table border="0" class="no-border reporte">
 		<tr style="font-size:14px;">
 			<td colspan="7" class="bold no-border center">FICHA DEL TRABAJADOR</td>	
 		</tr>
@@ -192,6 +125,7 @@
 	function imprSelec(muestra)
 	{var recibo=document.getElementById(muestra);
 		var ventimp=window.open(' ','popimpr');
+		ventimp.document.write('<html><head><title>Print it!</title><link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet"></head><body>');
 		ventimp.document.write(recibo.innerHTML);
 		ventimp.document.close();
 		ventimp.print();

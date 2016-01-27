@@ -50,9 +50,8 @@
 			        display: none !important;
 			    }
 			}
-		.reporte > tr > td{
-			padding-top: 2px;
-			padding-bottom: 6px;
+		.reporte td{
+			padding: 2px;
 		}
 		.bold{
 			font-weight: bold;

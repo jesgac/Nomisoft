@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Recibo</title>
+	<title>Ficha</title>
 	<style>
 		body{
 			font-family: Helvetica;
@@ -76,6 +76,8 @@
 	</style>
 </head>
 <body>
+
+<div id="muestra"> 
 	<center>
 	<table border="0" class="no-border">
 		<tr style="font-size:14px;">
@@ -182,13 +184,20 @@
 			<td colspan="3" class="bold center"><?php echo date("d-m-Y") ?></td>				
 		</tr>
 	</table>
-	<br><center>
-<input type="button" onClick=" window.print();" class="btn no-print" name="Imprime" value="Imprimir">
-
+	</div>
+	<center><br><input type="button" value="Imprimir" onclick="javascript:imprSelec('muestra')" class="btn no-print" />
 </body>
-
-
 </html>
+<script type="text/javascript">
+	function imprSelec(muestra)
+	{var recibo=document.getElementById(muestra);
+		var ventimp=window.open(' ','popimpr');
+		ventimp.document.write(recibo.innerHTML);
+		ventimp.document.close();
+		ventimp.print();
+		ventimp.close();}
+
+</script>
 <?php
 	function calculaedad($fechanacimiento){
 	list($ano,$mes,$dia) = explode("-",$fechanacimiento);

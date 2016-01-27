@@ -74,8 +74,8 @@
 	</style>
 </head>
 <body>
-
-<div>
+<div id="muestra"> 
+	
 	<center>
 	<table border="1">
 		<tr style="font-size:14px;">
@@ -308,11 +308,25 @@
 		</tr>
 		<tr><td colspan="6" class="no-border"> </td></tr>
 	</table>
-	
-	<br><input type="button" onClick=" window.print();" class="btn no-print" name="Imprime" value="Imprimir">
 	</div>
+
+	<center><br><input type="button" value="Imprimir" onclick="javascript:imprSelec('muestra')" class="btn no-print" />
 </body>
+
+</html>
+ 
+<script type="text/javascript">
+	function imprSelec(muestra)
+	{var recibo=document.getElementById(muestra);
+		var ventimp=window.open(' ','popimpr');
+		ventimp.document.write(recibo.innerHTML);
+		ventimp.document.close();
+		ventimp.print();
+		ventimp.close();}
+
+</script>
 <?php
+
 function lunes($date){
 	$fecha = new DateTime($date);
 	while (!isset($lunes)){
@@ -331,5 +345,3 @@ function lunes($date){
 
 
 
-
-</html>

@@ -53,7 +53,32 @@
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'fech_ini',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Fecha de Inicio', 'title'=>'Indique la Fecha de Inicio de la Obra.')); ?>
+						<?php
+  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+   'model'=>$model,
+   'attribute'=>'fech_ini',
+   'value'=>$model->fech_ini,
+   'language' => 'es',
+   'htmlOptions' => array('readonly'=>'readonly','class'=>'form-control','placeholder'=>'Fecha de Inicio','title'=>'Indique la fecha de inicio de la Obra'),
+   'options'=>array(
+    'autoSize'=>true,
+    'defaultDate'=>$model->fech_ini,
+    'dateFormat'=>'yy-mm-dd',
+    'buttonImage'=>'',
+    'buttonImageOnly'=>false,
+    'buttonText'=>'Fecha',
+    'selectOtherMonths'=>true,
+    'showAnim'=>'slide',
+    'showButtonPanel'=>true,
+    'showOn'=>'focus', 
+    'showOtherMonths'=>true, 
+    'changeMonth' => 'true', 
+    'changeYear' => 'true', 
+    'minDate'=>'-20Y', 
+    'maxDate'=> "+20Y",
+    ),
+  )); 
+ ?>
 						<?php echo  $model->hasErrors('fech_ini') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'fech_ini'); ?>
@@ -64,7 +89,32 @@
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'fech_fin',array('size'=>45,'maxlength'=>45,'class'=>'form-control','placeholder'=>'Fecha de Culminación', 'title'=>'Indique la Fecha de culminacion de la Obra.')); ?>
+						<?php
+  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+   'model'=>$model,
+   'attribute'=>'fech_fin',
+   'value'=>$model->fech_fin,
+   'language' => 'es',
+   'htmlOptions' => array('readonly'=>'readonly','class'=>'form-control','placeholder'=>'Fecha de Culminación','title'=>'Indique la fecha de Culminación de la Obra'),
+   'options'=>array(
+    'autoSize'=>true,
+    'defaultDate'=>$model->fech_fin,
+    'dateFormat'=>'yy-mm-dd',
+    'buttonImage'=>'',
+    'buttonImageOnly'=>false,
+    'buttonText'=>'Fecha',
+    'selectOtherMonths'=>true,
+    'showAnim'=>'slide',
+    'showButtonPanel'=>true,
+    'showOn'=>'focus', 
+    'showOtherMonths'=>true, 
+    'changeMonth' => 'true', 
+    'changeYear' => 'true', 
+    'minDate'=>'-20Y', 
+    'maxDate'=> "+20Y",
+    ),
+  )); 
+ ?>
 						<?php echo  $model->hasErrors('fech_fin') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'fech_fin'); ?>

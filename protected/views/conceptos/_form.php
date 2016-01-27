@@ -34,7 +34,32 @@
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'Fecha',array('size'=>50,'maxlength'=>10,'class'=>'form-control','title'=>'Indique la Fecha')); ?>
+						<?php
+  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+   'model'=>$model,
+   'attribute'=>'Fecha',
+   'value'=>$model->Fecha,
+   'language' => 'es',
+   'htmlOptions' => array('readonly'=>'readonly','class'=>'form-control','placeholder'=>'Fecha','title'=>'Indique la fecha del concepto'),
+   'options'=>array(
+    'autoSize'=>true,
+    'defaultDate'=>$model->Fecha,
+    'dateFormat'=>'yy-mm-dd',
+    'buttonImage'=>'',
+    'buttonImageOnly'=>false,
+    'buttonText'=>'Fecha',
+    'selectOtherMonths'=>true,
+    'showAnim'=>'slide',
+    'showButtonPanel'=>true,
+    'showOn'=>'focus', 
+    'showOtherMonths'=>true, 
+    'changeMonth' => 'true', 
+    'changeYear' => 'true', 
+    'minDate'=>'-20Y', 
+    'maxDate'=> "+20Y",
+    ),
+  )); 
+ ?>
 						<?php echo  $model->hasErrors('Fecha') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'Fecha'); ?>

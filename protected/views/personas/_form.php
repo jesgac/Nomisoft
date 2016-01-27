@@ -71,7 +71,32 @@
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'fecha_nac',array('class'=>'form-control','placeholder'=>'Fecha de Nacimiento', 'title'=>'Indique la Fecha de nacimiento de la persona.')); ?>
+						<?php
+  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+   'model'=>$model,
+   'attribute'=>'fecha_nac',
+   'value'=>$model->fecha_nac,
+   'language' => 'es',
+   'htmlOptions' => array('readonly'=>'readonly','class'=>'form-control','placeholder'=>'Fecha de Nacimiento','title'=>'Indique la fecha de Nacimiento'),
+   'options'=>array(
+    'autoSize'=>true,
+    'defaultDate'=>$model->fecha_nac,
+    'dateFormat'=>'yy-mm-dd',
+    'buttonImage'=>'',
+    'buttonImageOnly'=>false,
+    'buttonText'=>'Fecha',
+    'selectOtherMonths'=>true,
+    'showAnim'=>'slide',
+    'showButtonPanel'=>true,
+    'showOn'=>'focus', 
+    'showOtherMonths'=>true, 
+    'changeMonth' => 'true', 
+    'changeYear' => 'true', 
+    'minDate'=>'', 
+    'maxDate'=> '',
+    ),
+  )); 
+ ?>
 						<?php echo  $model->hasErrors('fecha_nac') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'fecha_nac'); ?>

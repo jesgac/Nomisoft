@@ -174,20 +174,20 @@ class NominaController extends Controller
         if($valid)
         {
           
-       $a->total_asig = $this->b_alimenticio($b->b_alimenticio,$a->id_empleado) +
-       $this->asistencia($b->asistencia,$a->id_empleado) + 
-       $this->hdiurnas($b->horasextra_diurna,$a->id_empleado) + 
-       $this->hnocturnas($b->horasextras_nocturna,$a->id_empleado) + 
-       $this->sabado($b->sabado,$a->id_empleado) + 
-       $this->feriado($b->feriado,$a->id_empleado) + 
+       $a->total_asig = $a->b_alimenticio($b->b_alimenticio,$a->id_empleado) +
+       $a->asistencia($b->asistencia,$a->id_empleado) + 
+       $a->hdiurnas($b->horasextra_diurna,$a->id_empleado) + 
+       $a->hnocturnas($b->horasextras_nocturna,$a->id_empleado) + 
+       $a->sabado($b->sabado,$a->id_empleado) + 
+       $a->feriado($b->feriado,$a->id_empleado) + 
        $a->prestamos + 
        $a->vaciado +
        $a->otros;
 
-       $a->total_deduc = $this->sso($c->sso,$a->id_empleado) +
-       $this->spf($c->spf,$a->id_empleado) +
-       $this->lph($c->lph,$a->id_empleado) +
-       $this->inasistencia($c->inasistencia,$a->id_empleado) +
+       $a->total_deduc = $a->sso($c->sso,$a->id_empleado) +
+       $a->spf($c->spf,$a->id_empleado) +
+       $a->lph($c->lph,$a->id_empleado) +
+       $a->inasistencia($c->inasistencia,$a->id_empleado) +
        $a->descuento;
 
        $empleado = Empleados::model()->findByAttributes(array('id'=>$a->id_empleado));

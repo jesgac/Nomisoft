@@ -19,10 +19,19 @@ $this->menu=array(
 
 	$result = $conn->query($sql);*/
 	$registro = '';
-	$archivo = Yii::getPathOfAlias('application').'\..\txt\nomina.txt'; //DIRECCIÓN DEL ARCHIVO TXT
+	$nombre_completo = '';
+	$descripcion = '';
+	date_default_timezone_set("America/Caracas");
+	$archivo = Yii::getPathOfAlias('application').'\..\txt\nomina '.date("d.m.Y_h.i.s").'.txt'; //DIRECCIÓN DEL ARCHIVO TXT
 	$total = 0;
 	$pagos = 0;
+	$referencia = 0;
 	
+	foreach ($nomina as $data) {
+		$total += $data->neto;
+		$pagos +=1;
+	}
+
 	//***CONTAR EL TOTAL A PAGAR DE LA NÓMINA Y LA CANTIDAD DE PAGOS REALIZADOS***
 	/*while ($row = $result->fetch_assoc()) {
 		$total += $row['neto'];
@@ -38,17 +47,48 @@ $this->menu=array(
 	$tipo_persona= "J315328232";
 	$nro_contrato = "40000315328232001";
 	$nro_lote=rellena_lote("1");
-	$fecha = "20150320";
+	$fecha = date("Ymd",strtotime($data->fecha));
 	$moneda = "VEB";
 	$filler = '';
 	for ($i=1;$i<=158;$i++){
 		$filler .=' ';
 	}
 	$registro = "01";
-	$registro .= $operacion.$tipo_persona.$nro_contrato.$nro_lote.$fecha.$pagos.$total.$moneda.$filler;
+	$registro .= $operacion.$tipo_persona.$nro_contrato.$nro_lote.$fecha.$pagos.$total.$moneda.$filler."\r\n";
 	//***CABECERA***
 
 	$linea = '';
+	foreach ($nomina as $data) {
+		$referencia++;
+		$linea = "02";
+		$linea .= ucwords($data->persona->nacionalidad);
+		$linea .= rellena_cedula($data->persona->cedula);
+		$nombre_completo .= $data->persona->nombre.' '.$data->persona->apellido;
+		$linea .= rellena_nombre(strtoupper($nombre_completo));
+		$nombre_completo = '';
+		$linea .= rellena_lote($referencia);
+		if ($data->cargo->tipo_sueldo == 1)
+			$descripcion = "SEMANA DE TRABAJO";
+		else
+			$descripcion = "QUINCENA DE TRABAJO";
+		$linea .= rellena_desc($descripcion);
+		$linea .= "CTA";
+		$linea .= $data->empleado->nro_cuenta;
+		$linea .= $data->empleado->cod_banco;
+		$linea .= date("Ymd",strtotime($data->fecha));
+		$linea .= rellena_monto($data->neto);
+		$linea .= "VEB";
+		$linea .=rellena_monto("0");
+		$linea .=rellena_email($data->persona->email);
+		$formato_telf=array("(",")","-");
+		$telefono = str_replace($formato_telf,"", $data->persona->telefono);
+		$linea .=rellena_telf($telefono);
+		for ($i=1;$i<=20;$i++){
+			$linea.=' ';
+		}
+		
+		$registro .= $linea."\r\n";
+	}
 	//$result->data_seek(0); //RETONRNAR EL APUNTADOR AL PRINCIPIO
 
 	/*while ($row = $result->fetch_assoc()) {

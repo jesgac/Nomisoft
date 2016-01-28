@@ -72,10 +72,10 @@ class NominaController extends Controller
 	public function actionTxt(){
 
 		$criteria = new CDbCriteria;
-		$criteria->with=array('empleado','persona');
-		$nomina = Nomina::model()->findAll();
-		$this->render('view',array(
-			'a'=>$a,
+		$criteria->with=array('empleado','persona','cargo');
+		$nomina = Nomina::model()->findAll($criteria);
+		$this->render('txt',array(
+			'nomina'=>$nomina,
         ));
 	}
 

@@ -9,10 +9,10 @@
 </head>
 <body>
 
-<div id="muestra" class="helvetica">
+<div id="muestra">
 
 	<center>
-	<table border="0" class="no-border reporte">
+	<table border="0" class="no-border reporte helvetica">
 		<tr style="font-size:14px;">
 			<td colspan="7" class="bold no-border center">FICHA DEL TRABAJADOR</td>	
 		</tr>
@@ -125,7 +125,7 @@
 	function imprSelec(muestra)
 	{var recibo=document.getElementById(muestra);
 		var ventimp=window.open(' ','popimpr');
-		ventimp.document.write('<html><head><title>Print it!</title><link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet"></head><body>');
+		ventimp.document.write('<html><head><title>Impresion!</title><link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet"></head><body>');
 		ventimp.document.write(recibo.innerHTML);
 		ventimp.document.close();
 		ventimp.print();

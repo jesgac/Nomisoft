@@ -252,7 +252,7 @@
 	function imprSelec(muestra)
 	{var recibo=document.getElementById(muestra);
 		var ventimp=window.open(' ','popimpr');
-		ventimp.document.write('<html><head><title>Print it!</title><link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet"></head><body>');
+		ventimp.document.write('<html><head><title>Impresion!</title><link href="<?php echo Yii::app()->baseUrl; ?>/css/imprimir.css" rel="stylesheet"></head><body>');
 		ventimp.document.write(recibo.innerHTML);
 		ventimp.document.close();
 		ventimp.print();

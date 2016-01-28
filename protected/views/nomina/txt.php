@@ -22,7 +22,8 @@ $this->menu=array(
 	$nombre_completo = '';
 	$descripcion = '';
 	date_default_timezone_set("America/Caracas");
-	$archivo = Yii::getPathOfAlias('application').'\..\txt\nomina '.date("d.m.Y_h.i.s").'.txt'; //DIRECCIÓN DEL ARCHIVO TXT
+	$archivo = 'nomina '.date("d.m.Y_h.i.s").'.txt';
+	$ruta = Yii::getPathOfAlias('application').'/../txt/'.$archivo; //DIRECCIÓN DEL ARCHIVO TXT
 	$total = 0;
 	$pagos = 0;
 	$referencia = 0;
@@ -44,10 +45,10 @@ $this->menu=array(
 	
 	//***CABECERA***
 	$operacion = "Nómina              "; 
-	$tipo_persona= "J315328232";
-	$nro_contrato = "40000315328232001";
+	$tipo_persona= strtoupper($model->rif);
+	$nro_contrato = $model->contrato;
 	$nro_lote=rellena_lote("1");
-	$fecha = date("Ymd",strtotime($data->fecha));
+	$fecha = date("Ymd",strtotime($model->fecha));
 	$moneda = "VEB";
 	$filler = '';
 	for ($i=1;$i<=158;$i++){
@@ -114,8 +115,10 @@ $this->menu=array(
 	}*/
 	$registro = mb_convert_encoding($registro, "ISO-8859-1");;
 	///***CREACIÓN DEL ARCHIVO TXT***
-	if(file_put_contents($archivo,$registro)){
-		echo "Archivo Creado exitosamente";
+	if(file_put_contents($ruta,$registro)){
+		$myfile = Yii::app()->file->set($ruta, true);
+		if (Yii::app()->file->set($ruta)->exists)
+		    $myfile->download();
 	}else{
 		echo "Fallo al crear el archivo txt";
 	}

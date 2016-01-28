@@ -85,6 +85,7 @@ $this->menu=array(
 	  </a>
 	  <a href="index.php?r=nomina/create" class="list-group-item">Nueva Nómina</a>
 	  <a href="index.php?r=nomina/imprimir" class="list-group-item">Imprimir Reporte</a>
+    <a href="index.php?r=nomina/txt" class="list-group-item">Imprimir Txt</a>
 </div>
 
 <?php

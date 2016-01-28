@@ -41,6 +41,9 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		'file'=>array(
+       		'class'=>'application.extensions.file.CFile',
+    	),
 
 		// uncomment the following to enable URLs in path-format
 		/*

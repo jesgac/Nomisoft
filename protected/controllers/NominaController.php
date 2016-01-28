@@ -70,13 +70,29 @@ class NominaController extends Controller
 	}
 
 	public function actionTxt(){
-
-		$criteria = new CDbCriteria;
-		$criteria->with=array('empleado','persona','cargo');
-		$nomina = Nomina::model()->findAll($criteria);
-		$this->render('txt',array(
-			'nomina'=>$nomina,
-        ));
+		$model=new Txt;
+		 if(isset($_POST['Txt']))
+	    {
+	        $model->attributes=$_POST['Txt'];
+	        if($model->validate())
+	        {
+				$criteria = new CDbCriteria;
+				$criteria->condition='fecha=:fecha';
+				$criteria->params = array(':fecha'=>$model->fecha);
+				$criteria->with=array('empleado','persona','cargo');
+				$nomina = Nomina::model()->findAll($criteria);
+				$this->render('txt',array(
+					'nomina'=>$nomina,
+					'model'=>$model
+	        	));
+	        				
+		    	return true;
+		    }
+	    }
+		
+		$this->render('txt_form',array(
+			'model'=>$model,
+		));
 	}
 
 	/**

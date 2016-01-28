@@ -33,7 +33,31 @@ $this->breadcrumbs=array(
 						<span class="input-group-addon">
 							<i class="fa fa-calendar fa-fw"></i>
 						</span>
-						<?php echo $form->dateField($model,'fecha',array('class'=>'form-control','placeholder'=>'Fecha','title'=>'Indique fecha')); ?>
+						<?php
+							  $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+							   'model'=>$model,
+							   'attribute'=>'fecha',
+							   'value'=>$model->fecha,
+							   'language' => 'es',
+							   'htmlOptions' => array('readonly'=>'readonly','class'=>'form-control','placeholder'=>'Fecha','title'=>'Indique la fecha'),
+							   'options'=>array(
+							    'autoSize'=>true,
+							    'defaultDate'=>$model->fecha,
+							    'dateFormat'=>'yy-mm-dd',
+							    'buttonImage'=>'',
+							    'buttonImageOnly'=>false,
+							    'buttonText'=>'Fecha',
+							    'selectOtherMonths'=>true,
+							    'showAnim'=>'slide',
+							    'showButtonPanel'=>true,
+							    'showOn'=>'focus', 
+							    'showOtherMonths'=>true, 
+							    'changeMonth' => 'true', 
+							    'changeYear' => 'true', 
+							    'yearRange'=>'1900:3000',
+							    ),
+							  )); 
+						 ?>
 						<?php echo  $model->hasErrors('fecha') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'fecha'); ?>

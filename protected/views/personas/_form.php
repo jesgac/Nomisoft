@@ -92,8 +92,7 @@
     'showOtherMonths'=>true, 
     'changeMonth' => 'true', 
     'changeYear' => 'true', 
-    'minDate'=>'', 
-    'maxDate'=> '',
+    'yearRange'=>'1900:3000',
     ),
   )); 
  ?>

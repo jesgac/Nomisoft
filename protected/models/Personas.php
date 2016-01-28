@@ -35,7 +35,7 @@ class Personas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido, cedula, fecha_nac, lugar_nac, nacionalidad, sexo, direccion, telefono, email', 'required'),
+			array('nombre, apellido, cedula, fecha_nac, lugar_nac, nacionalidad, sexo, direccion', 'required'),
 			array('cedula','numerical'),
 			array('nombre, apellido, email', 'length', 'max'=>50),
 			array('cedula', 'length', 'max'=>15),

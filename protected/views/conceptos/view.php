@@ -33,7 +33,7 @@ $this->menu=array(
             'value'=>tipo($model),
                
         ),
-			'bono',
+			'Valor',
 			),
 		)); ?>
     </div>

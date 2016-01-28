@@ -77,9 +77,9 @@ class NominaController extends Controller
 	        if($model->validate())
 	        {
 				$criteria = new CDbCriteria;
-				$criteria->condition='fecha=:fecha';
-				$criteria->params = array(':fecha'=>$model->fecha);
 				$criteria->with=array('empleado','persona','cargo');
+				$criteria->condition='fecha=:fecha AND empleado.cod_banco!=""';
+				$criteria->params = array(':fecha'=>$model->fecha);
 				$nomina = Nomina::model()->findAll($criteria);
 				$this->render('txt',array(
 					'nomina'=>$nomina,

@@ -78,7 +78,7 @@ class NominaController extends Controller
 	        {
 				$criteria = new CDbCriteria;
 				$criteria->with=array('empleado','persona','cargo');
-				$criteria->condition='fecha=:fecha AND empleado.cod_banco!=""';
+				$criteria->condition='fecha=:fecha AND empleado.nro_cuenta!=""';
 				$criteria->params = array(':fecha'=>$model->fecha);
 				$nomina = Nomina::model()->findAll($criteria);
 				$this->render('txt',array(

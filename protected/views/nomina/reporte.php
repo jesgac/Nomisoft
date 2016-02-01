@@ -196,8 +196,8 @@
 		</tr>
 
 	</table>
-	<br><center><input type="button" onClick=" window.print();" class="btn no-print" name="Imprime" value="Imprimir">
-	<input type="button" onClick="location.href='index.php?r=nomina/admin'" class="btn no-print" name="Volver" value="Volver">
+	<br><center><input type="button" onClick=" window.print();" class="btn no-print"  style="cursor:pointer" name="Imprime" value="Imprimir">
+	<input type="button" onClick="location.href='index.php?r=nomina/admin'" class="btn no-print" style="cursor:pointer" name="Volver" value="Volver">
 	
 </body>
 </html>

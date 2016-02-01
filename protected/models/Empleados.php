@@ -41,7 +41,7 @@ class Empleados extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_persona, id_obra,  id_empresa, id_cargo,  tipo_empleado', 'required'),
+			array('id_persona, id_empresa, id_cargo,  tipo_empleado', 'required'),
 			array('id_persona, id_empresa, id_talla, id_cargo,nro_cuenta', 'numerical', 'integerOnly'=>true),
 			array('id_obra', 'length', 'max'=>50),
 			array('id_persona', 'unique','message'=>'Este empleado ya existe'),

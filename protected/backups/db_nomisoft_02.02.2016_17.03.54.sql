@@ -595,7 +595,7 @@ INSERT INTO `tallas` (`id`,`talla_zapato`,`talla_pantalon`,`talla_camisa`) VALUE
 INSERT INTO `tallas` (`id`,`talla_zapato`,`talla_pantalon`,`talla_camisa`) VALUES
 ('2','','','');
 INSERT INTO `tallas` (`id`,`talla_zapato`,`talla_pantalon`,`talla_camisa`) VALUES
-('3','','','');
+('3','45','38','xl');
 INSERT INTO `tallas` (`id`,`talla_zapato`,`talla_pantalon`,`talla_camisa`) VALUES
 ('4','','','');
 INSERT INTO `tallas` (`id`,`talla_zapato`,`talla_pantalon`,`talla_camisa`) VALUES

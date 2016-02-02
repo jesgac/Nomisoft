@@ -3,7 +3,7 @@
 /* @var $model Empleados */
 
 $this->breadcrumbs=array(
-	'Trabajador'=>array('index'),
+	'Trabajador'=>array('admin'),
 	$a->persona->nombre.' '.$a->persona->apellido=>array('view','id'=>$a->id),
 	'Modificar',
 );

@@ -37,6 +37,7 @@ class Personas extends CActiveRecord
 		return array(
 			array('nombre, apellido, cedula, fecha_nac, lugar_nac, nacionalidad, sexo, direccion', 'required'),
 			array('cedula','numerical'),
+			array('cedula','unique', 'message'=>'Esta CI ya esta registrada'),
 			array('nombre, apellido, email', 'length', 'max'=>50),
 			array('cedula', 'length', 'max'=>15),
 			array('nacionalidad, sexo', 'length', 'max'=>1),

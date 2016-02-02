@@ -67,7 +67,7 @@ $this->breadcrumbs=array(
 						<span class="input-group-addon">
 							<i class="fa fa-barcode fa-fw"></i>
 						</span>
-						<?php echo $form->textField($model,'rif',array('class'=>'form-control','placeholder'=>'Rif','title'=>'Indique Su Registro de Información Fiscal')); ?>
+						<?php echo $form->textField($model,'rif',array('size'=>11,'maxlength'=>11,'class'=> 'form-control','placeholder'=>'Rif','title'=>'Indique Su Registro de Información Fiscal')); ?>
 						<?php echo  $model->hasErrors('rif') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($model,'rif'); ?>

@@ -30,6 +30,7 @@ class Usuario extends CActiveRecord
 		return array(
 			array('id_persona, user, pass, nivel', 'required'),
 			array('id_persona, nivel', 'numerical', 'integerOnly'=>true),
+			array('user', 'unique', 'message'=> 'Ya existe este usuario'),
 			array('user', 'length', 'max'=>50),
 			array('pass', 'length', 'max'=>150),
 			// The following rule is used by search().

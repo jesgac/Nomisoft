@@ -333,43 +333,6 @@ class NominaController extends Controller
 		}
 	}
 
-	
-
-	public function actionAutocomplete($term) 
-{
- $criteria = new CDbCriteria;
- $criteria->compare('LOWER(apellido)', strtolower($_GET['term']), true);
- $criteria->compare('LOWER(nombre)', strtolower($_GET['term']), true, 'OR');
- $criteria->order = 'apellido';
- $criteria->with = array( 'empleados');
- $criteria->limit = 30; 
- $data = Personas::model()->findAll($criteria);
-
- if (!empty($data))
- {
-  $arr = array();
-  foreach ($data as $item) {
-   $arr[] = array(
-    'id' => $item->id,
-    'value' => $item->nombre.' '.$item->apellido,
-    'label' => $item->nombre.' '.$item->apellido,
-   );
-  }
- }
- else
- {
-  $arr = array();
-  $arr[] = array(
-   'id' => '',
-   'value' => 'No se han encontrado resultados para su búsqueda',
-   'label' => 'No se han encontrado resultados para su búsqueda',
-  );
- }
-  
- echo CJSON::encode($arr);
-}
-
-
 /*public function actionRecibo($id)
 {
 		$a=$this->loadModel($id);
@@ -406,14 +369,6 @@ public function actionRecibo($id)
            'model'=>$this->loadModel($id),
          ));
 }
-
-
-
-
-
-
-
-
 
 
 public function actionImprimir()

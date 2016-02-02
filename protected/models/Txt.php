@@ -13,6 +13,7 @@
         // will receive user inputs.
         return array(
             array('fecha,rif,contrato', 'required'),
+            array('rif', 'length', 'max'=>11),
             array('contrato','numerical','integerOnly'=>true)
         );
     }

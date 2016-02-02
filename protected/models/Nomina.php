@@ -24,6 +24,7 @@
 			
 			return array(
 			array('id_empleado,fecha','required'),
+			array('id_empleado','unique', 'message' => 'Este trabajador ya se encuentra en la Nomina' ),
 			array('otros,vaciado,descuento,prestamos', 'numerical'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -107,8 +108,11 @@
 	}
 
 	public function feriado($dias,$id){
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';		
+
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>4));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>4),$criteria);
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
 		
 		if ($cargo->tipo_sueldo == 1){
@@ -122,8 +126,10 @@
 	}
 
 	public function sabado($dias,$id){
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>5));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>5),$criteria);
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
 		
 		if ($cargo->tipo_sueldo == 1){
@@ -137,17 +143,22 @@
 	}
 
 	public function b_alimenticio($dias){
-		$ut = Conceptos::model()->findByAttributes(array('tipo_bono'=>1));
-		$alimenticio = Conceptos::model()->findByAttributes(array('tipo_bono'=>6));
+
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';
+		$ut = Conceptos::model()->findByAttributes(array('tipo_bono'=>1),$criteria);
+		$alimenticio = Conceptos::model()->findByAttributes(array('tipo_bono'=>6),$criteria);
 		$b_alimenticio = $ut->bono * $alimenticio->bono * $dias;
 		return  $b_alimenticio;
 
 	}
 
 	public function hdiurnas($horas,$id){
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>2));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>2),$criteria);
 		if ($cargo->tipo_sueldo == 1){
 			$semana_mes = 7;
 		}else{
@@ -163,9 +174,11 @@
 	}
 
 	public function hnocturnas($horas,$id){
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>3));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>3),$criteria);
 		if ($cargo->tipo_sueldo == 1){
 			$semana_mes = 7;
 		}else{
@@ -180,9 +193,11 @@
 	}
 
 	public function sso($seguro,$id){
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>7));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>7),$criteria);
 		
 		if ($seguro == 0)
 			return $seguro;
@@ -198,9 +213,11 @@
 	}
 
 	public function spf($seguro,$id){
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>8));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>8),$criteria);
 		if ($seguro == 0)
 			return $seguro;
 		else {
@@ -215,9 +232,11 @@
 	}
 
 	public function lph($seguro,$id){
+		$criteria=new CDbCriteria();
+		$criteria->order='Fecha DESC';
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>9));
+		$concepto = Conceptos::model()->findByAttributes(array('tipo_bono'=>9),$criteria);
 		if ($seguro == 0)
 			return $seguro;
 		else {
@@ -232,6 +251,7 @@
 	}
 
 	public function inasistencia($dias,$id){
+
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
 
@@ -248,6 +268,7 @@
 	}
 
 	public function asistencia($asistencia,$id){
+
 		$empleado = Empleados::model()->findByAttributes(array('id'=>$id));
 		$cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
 		if ($asistencia == 0)

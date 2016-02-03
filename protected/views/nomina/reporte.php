@@ -154,7 +154,7 @@
 			<?php echo ($data->empleado->nro_cuenta!="") ? '<tr>' : '<tr bgcolor="yellow">' ?>
 				<td><?php echo $data->obra->nombre_obra; ?></td>
 				<td><?php echo $data->persona->nombre.' '.$data->persona->apellido; ?></td>
-				<?php echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">':'<td class="right"  bgcolor="yellow">'.number_format($data->cargo->sueldo, 2,',','.'); ?></td> <?php $t_sueldo += $data->cargo->sueldo; ?>
+				<?php echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">'.number_format($data->cargo->sueldo, 2,',','.'):'<td class="right"  bgcolor="yellow">'.number_format($data->cargo->sueldo, 2,',','.'); ?></td> <?php $t_sueldo += $data->cargo->sueldo; ?>
 				<td class="right"><?php echo ($data->asig->asistencia==0) ? '-' : number_format($data->asistencia($data->asig->asistencia,$data->empleado->id), 2,',','.'); ?></td> <?php $t_asistencia += $data->asistencia($data->asig->asistencia,$data->empleado->id); ?>
 				<td class="right"><?php echo ($data->asig->b_alimenticio==0) ? '-' : number_format($data->b_alimenticio($data->asig->b_alimenticio), 2,',','.'); ?></td> <?php $t_alimenticio += $data->b_alimenticio($data->asig->b_alimenticio); ?>
 				<td class="right"><?php echo ($data->asig->feriado==0) ? '-' : number_format($data->feriado($data->asig->feriado,$data->empleado->id), 2,',','.'); ?></td> <?php $t_feriado += $data->feriado($data->asig->feriado,$data->empleado->id); ?>
@@ -163,13 +163,13 @@
 				<td class="right"><?php echo ($data->asig->horasextras_nocturna==0) ? '-' : number_format($data->hnocturnas($data->asig->horasextras_nocturna,$data->empleado->id), 2,',','.'); ?></td> <?php $t_nocturnas += $data->hnocturnas($data->asig->horasextras_nocturna,$data->empleado->id); ?>
 				<td class="right"><?php echo ($data->vaciado==0) ? '-' : number_format($data->vaciado, 2,',','.'); ?></td> <?php $t_vaciado += $data->vaciado; ?>
 				<td class="right"><?php echo ($data->otros==0) ? '-' : number_format($data->otros, 2,',','.'); ?></td> <?php $t_otros += $data->otros; ?>
-				<?php echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">':'<td class="right"  bgcolor="yellow">'. number_format($data->total_asig, 2,',','.'); ?></td> <?php $t_asig += $data->total_asig; ?>
+				<?php echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">'. number_format($data->total_asig, 2,',','.'):'<td class="right"  bgcolor="yellow">'. number_format($data->total_asig, 2,',','.'); ?></td> <?php $t_asig += $data->total_asig; ?>
 				<td class="right"><?php echo ($data->deduc->sso==0) ? '-' : number_format($data->sso($data->deduc->sso,$data->empleado->id), 2,',','.'); ?></td> <?php $t_sso += $data->sso($data->deduc->sso,$data->empleado->id); ?>
 				<td class="right"><?php echo ($data->deduc->spf==0) ? '-' : number_format($data->spf($data->deduc->spf,$data->empleado->id), 2,',','.'); ?></td> <?php $t_spf += $data->spf($data->deduc->spf,$data->empleado->id); ?>
 				<td class="right"><?php echo ($data->deduc->lph==0) ? '-' : number_format($data->lph($data->deduc->lph,$data->empleado->id), 2,',','.'); ?></td> <?php $t_lph += $data->lph($data->deduc->lph,$data->empleado->id); ?>
 				<td class="right"><?php echo ($data->deduc->inasistencia==0) ? '-' : number_format($data->inasistencia($data->deduc->inasistencia,$data->empleado->id), 2,',','.'); ?></td> <?php $t_inasistencia += $data->inasistencia($data->deduc->inasistencia,$data->empleado->id); ?>
 				<td class="right"><?php echo ($data->descuento==0) ? '-' : number_format($data->descuento, 2,',','.'); ?></td> <?php $t_descuento += $data->descuento; ?>
-				<?php echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">':'<td class="right"  bgcolor="yellow">'.number_format($data->total_deduc, 2,',','.'); ?></td> <?php $t_deducciones += $data->total_deduc ?>
+				<?php echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">'.number_format($data->total_deduc, 2,',','.'):'<td class="right"  bgcolor="yellow">'.number_format($data->total_deduc, 2,',','.'); ?></td> <?php $t_deducciones += $data->total_deduc ?>
 				<td class="right"><?php echo number_format($data->neto, 2,',','.'); ?></td> <?php $t_neto += $data->neto ?>
 			</tr>
 		<?php endforeach?>

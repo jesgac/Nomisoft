@@ -37,7 +37,7 @@
 			<td class="bold"><?php echo $a->cargo->cargo ?></td>
 			<td class="bold"><?php echo $a->obra->nombre_obra ?></td>
 			<TD class="no-border">Sueldo</TD>
-			<td class="no-border"><?php echo $a->cargo->tipo_sueldo = 1 ? 'Semanal' : 'Mensual'; ?></td>
+			<td class="no-border"><?php echo $a->cargo->tipo_sueldo == 1 ? 'Semanal' : 'Mensual'; ?></td>
 			<td><?php echo number_format($a->cargo->sueldo, 2,',','.')." Bs."; ?></td>
 		</tr>
 		<tr>

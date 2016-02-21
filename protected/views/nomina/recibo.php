@@ -38,8 +38,13 @@
 			<td class="bold"><?php echo $a->cargo->cargo ?></td>
 			<td class="bold"><?php echo $a->obra->nombre_obra ?></td>
 			<TD class="no-border">Sueldo</TD>
+<<<<<<< HEAD
 			<td class="no-border"><?php echo $a->cargo->tipo_sueldo == 1 ? 'Semanal' : 'Quincenal'; ?></td>
 			<td><?php echo $a->cargo->tipo_sueldo == 1 ? number_format($a->cargo->sueldo, 2,',','.')." Bs." : number_format(($a->cargo->sueldo /2), 2,',','.')." Bs."; ?></td>
+=======
+			<td class="no-border"><?php echo $a->cargo->tipo_sueldo == 1 ? 'Semanal' : 'Mensual'; ?></td>
+			<td><?php echo number_format($a->cargo->sueldo, 2,',','.')." Bs."; ?></td>
+>>>>>>> origin/master
 		</tr>
 		<tr>
 			<td colspan="3" bgcolor="cyan" class="center bold">I ASIGNACIONES</td>

@@ -145,8 +145,12 @@ class NominaController extends Controller
 
        $empleado = Empleados::model()->findByAttributes(array('id'=>$a->id_empleado));
 	   $cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
-       
-       $a->neto = $cargo->sueldo + $a->total_asig - $a->total_deduc;
+      
+       if ($cargo->tipo_sueldo == 1){
+			$a->neto = $cargo->sueldo + $a->total_asig - $a->total_deduc;
+		}else{
+			$a->neto =( $cargo->sueldo /2 )+ $a->total_asig - $a->total_deduc;
+		}
 
        
 
@@ -219,7 +223,14 @@ class NominaController extends Controller
        $empleado = Empleados::model()->findByAttributes(array('id'=>$a->id_empleado));
 	   $cargo = Cargos::model()->findByAttributes(array('id'=>$empleado->id_cargo));
        
-       $a->neto = $cargo->sueldo + $a->total_asig - $a->total_deduc;
+       if ($cargo->tipo_sueldo == 1){
+			$a->neto = $cargo->sueldo + $a->total_asig - $a->total_deduc;
+		}else{
+			$a->neto =( $cargo->sueldo /2 )+ $a->total_asig - $a->total_deduc;
+		}
+
+
+
 
        
 

@@ -154,7 +154,14 @@
 			<?php echo ($data->empleado->nro_cuenta!="") ? '<tr>' : '<tr bgcolor="yellow">' ?>
 				<td><?php echo $data->obra->nombre_obra; ?></td>
 				<td><?php echo $data->persona->nombre.' '.$data->persona->apellido; ?></td>
-				<?php echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">'.number_format($data->cargo->sueldo, 2,',','.'):'<td class="right"  bgcolor="yellow">'.number_format($data->cargo->sueldo, 2,',','.'); ?></td> <?php $t_sueldo += $data->cargo->sueldo; ?>
+				
+				<?php if ($data->cargo->tipo_sueldo == 1){
+                   	echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">'.number_format($data->cargo->sueldo, 2,',','.'):'<td class="right"  bgcolor="yellow">'.number_format($data->cargo->sueldo, 2,',','.'); ?></td> <?php $t_sueldo += $data->cargo->sueldo;
+                    }else{
+                    echo ($data->empleado->nro_cuenta!="") ? '<td class="right"  bgcolor="cyan">'.number_format(($data->cargo->sueldo/2), 2,',','.'):'<td class="right"  bgcolor="yellow">'.number_format(($data->cargo->sueldo/2), 2,',','.'); ?></td> <?php $t_sueldo += ($data->cargo->sueldo/2);
+                }?>
+				
+
 				<td class="right"><?php echo ($data->asig->asistencia==0) ? '-' : number_format($data->asistencia($data->asig->asistencia,$data->empleado->id), 2,',','.'); ?></td> <?php $t_asistencia += $data->asistencia($data->asig->asistencia,$data->empleado->id); ?>
 				<td class="right"><?php echo ($data->asig->b_alimenticio==0) ? '-' : number_format($data->b_alimenticio($data->asig->b_alimenticio), 2,',','.'); ?></td> <?php $t_alimenticio += $data->b_alimenticio($data->asig->b_alimenticio); ?>
 				<td class="right"><?php echo ($data->asig->feriado==0) ? '-' : number_format($data->feriado($data->asig->feriado,$data->empleado->id), 2,',','.'); ?></td> <?php $t_feriado += $data->feriado($data->asig->feriado,$data->empleado->id); ?>

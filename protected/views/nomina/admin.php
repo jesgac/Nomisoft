@@ -35,7 +35,13 @@ $this->menu=array(
           'header'=>'Sueldo',
           'name'=>'sueldo_search',
           'value'=>function($data){
-                  return number_format($data->cargo->sueldo, 2,',','.');
+                  if ($data->cargo->tipo_sueldo == 1){
+                    return number_format($data->cargo->sueldo, 2,',','.');
+                    }else{
+                    return number_format(($data->cargo->sueldo/2), 2,',','.');
+                    }
+                  
+
               },
           'htmlOptions'=>array('style' => 'text-align: right;')
     ),

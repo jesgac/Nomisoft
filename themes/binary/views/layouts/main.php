@@ -27,15 +27,19 @@
                 </button>
                 <a class="navbar-brand" href="index.php" style="padding:0px;background-color:#428bca"><img src="<?php echo Yii::app()->baseUrl; ?>/images/logo.png" alt=""></a> 
             </div>
+  <div style="color: white;
+padding: 15px 50px 5px 10px;
+float: right;
+font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary square-btn-adjust">Salir (<?php echo Yii::app()->user->name?>)</a> </div>
  <?php if (Yii::app()->user->getState('role') ==3)
     echo"
 <div style='color: white;
-padding: 20px 50px 0px 0px;
-float: right;'><a href='index.php?r=backup' class=' fa fa-download fa-2x' style='color:white;text-decoration:none'></a> </div>";?>
-  <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"><a href="index.php?r=site/logout" class="btn btn-primary square-btn-adjust">Salir (<?php echo Yii::app()->user->name?>)</a> </div>
+padding: 20px 20px 0px 0px;
+float: right;'><a href='index.php?r=backup' class=' fa fa-download fa-2x' style='color:white;text-decoration:none'></a> </div>
+<div style='color: white;
+padding: 20px 20px 0px 0px;
+float: right;'><a href='index.php?r=auditoria/admin' class=' fa fa-eye fa-2x' style='color:white;text-decoration:none'></a> </div>
+";?>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">

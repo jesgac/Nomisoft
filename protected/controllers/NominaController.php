@@ -7,6 +7,7 @@ class NominaController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column1';
+	public $modelo='Nomina';
 
 	/**
 	 * @return array action filters
@@ -67,6 +68,15 @@ class NominaController extends Controller
         	'b'=>$b,
         	'c'=>$c,
 		));
+		date_default_timezone_set('America/Caracas');
+		$auditoria = new Auditoria;
+		$auditoria->id_user=Yii::app()->user->getId();
+		$auditoria->accion=1;
+		$auditoria->modelo=$this->modelo;
+		$auditoria->id_registro=$id;
+		$auditoria->fecha=date("Y-m-d h:i:s"); 
+		$auditoria->save(false);
+
 	}
 
 	public function actionTxt(){
@@ -85,6 +95,14 @@ class NominaController extends Controller
 					'nomina'=>$nomina,
 					'model'=>$model
 	        	));
+	        	date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=8;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=0;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);
 	        				
 		    	return true;
 		    }
@@ -161,6 +179,15 @@ class NominaController extends Controller
 	            $a->id_deduccion  = $c->id;
 
             	$a->save(false);
+
+            	date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=2;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=$a->id;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);
             	
             
             $this->redirect(array('admin'));
@@ -241,6 +268,15 @@ class NominaController extends Controller
 	            $a->id_deduccion  = $c->id;
 
             	$a->save(false);
+
+            	date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=3;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=$a->id;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);
             	
             
             $this->redirect(array('admin'));
@@ -370,6 +406,14 @@ public function actionRecibo($id)
 		        'b'=>$b,
 		        'c'=>$c,
              ),false,true);
+        date_default_timezone_set('America/Caracas');
+		$auditoria = new Auditoria;
+		$auditoria->id_user=Yii::app()->user->getId();
+		$auditoria->accion=6;
+		$auditoria->modelo=$this->modelo;
+		$auditoria->id_registro=$a->id;
+		$auditoria->fecha=date("Y-m-d h:i:s"); 
+		$auditoria->save(false);
         //js-code to open the dialog    
           if (!empty($_GET['asDialog'])) 
             echo CHtml::script('$("#dlg-address-view").dialog("open")');
@@ -390,7 +434,15 @@ public function actionImprimir()
 	        $model->attributes=$_POST['Imprimir'];
 	        if($model->validate())
 	        {
-	        	$this->renderPartial('reporte',array('model'=>$model->fecha,));				
+	        	$this->renderPartial('reporte',array('model'=>$model->fecha,));
+	        	date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=7;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=0;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);				
 		    	return true;
 		    }
 	    }

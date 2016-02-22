@@ -7,6 +7,7 @@ class EmpleadosController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column1';
+	public $modelo='Empleados';
 
 	/**
 	 * @return array action filters
@@ -64,6 +65,14 @@ class EmpleadosController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+		date_default_timezone_set('America/Caracas');
+		$auditoria = new Auditoria;
+		$auditoria->id_user=Yii::app()->user->getId();
+		$auditoria->accion=1;
+		$auditoria->modelo=$this->modelo;
+		$auditoria->id_registro=$id;
+		$auditoria->fecha=date("Y-m-d h:i:s"); 
+		$auditoria->save(false);
 	}
 
 	/**
@@ -91,6 +100,15 @@ class EmpleadosController extends Controller
 				$a->id_talla = $b->id;
 				$a->save(false);
 				
+				date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=2;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=$a->id;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);
+
 				$this->redirect(array('admin'));
        		}
 
@@ -128,6 +146,16 @@ class EmpleadosController extends Controller
 				$a->id_talla = $b->id;
 				$a->save(false);
 				
+				date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=3;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=$a->id;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);
+
+
 				$this->redirect(array('admin'));
        		}
 
@@ -149,6 +177,14 @@ class EmpleadosController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
+		date_default_timezone_set('America/Caracas');
+		$auditoria = new Auditoria;
+		$auditoria->id_user=Yii::app()->user->getId();
+		$auditoria->accion=4;
+		$auditoria->modelo=$this->modelo;
+		$auditoria->id_registro=$id;
+		$auditoria->fecha=date("Y-m-d h:i:s"); 
+		$auditoria->save(false);
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

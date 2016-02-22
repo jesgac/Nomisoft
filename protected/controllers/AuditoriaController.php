@@ -1,12 +1,11 @@
 <?php
 
-class EmpresaController extends Controller
+class AuditoriaController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $modelo = 'Empresas';
 	public $layout='//layouts/column1';
 
 	/**
@@ -27,15 +26,10 @@ class EmpresaController extends Controller
 	 */
 	public function accessRules()
 	{
-		if( Yii::app()->user->getState('role') ==1)
-        {
-            $arr =array('create','update','admin','view','delete');   // give all access to admin
-        }else{
-        	if( Yii::app()->user->getState('role') ==3)
-        			$arr =array('create','update','admin','delete','view');   // give all access to admin
-        		else
-        			$arr = array('');
-        }
+		if( Yii::app()->user->getState('role') ==3)
+			$arr =array('admin','view');   // give all access to admin
+		else
+			$arr = array('');
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>$arr,
@@ -65,14 +59,6 @@ class EmpresaController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
-		date_default_timezone_set('America/Caracas');
-		$auditoria = new Auditoria;
-		$auditoria->id_user=Yii::app()->user->getId();
-		$auditoria->accion=1;
-		$auditoria->modelo=$this->modelo;
-		$auditoria->id_registro=$id;
-		$auditoria->fecha=date("Y-m-d h:i:s"); 
-		$auditoria->save(false);
 	}
 
 	/**
@@ -81,24 +67,15 @@ class EmpresaController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Empresa;
+		$model=new Auditoria;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Empresa']))
+		if(isset($_POST['Auditoria']))
 		{
-			$model->attributes=$_POST['Empresa'];
+			$model->attributes=$_POST['Auditoria'];
 			if($model->save())
-				date_default_timezone_set('America/Caracas');
-				$auditoria = new Auditoria;
-				$auditoria->id_user=Yii::app()->user->getId();
-				$auditoria->accion=2;
-				$auditoria->modelo=$this->modelo;
-				$auditoria->id_registro=$model->id;
-				$auditoria->fecha=date("Y-m-d h:i:s"); 
-				$auditoria->save(false);
-
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -119,19 +96,10 @@ class EmpresaController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Empresa']))
+		if(isset($_POST['Auditoria']))
 		{
-			$model->attributes=$_POST['Empresa'];
+			$model->attributes=$_POST['Auditoria'];
 			if($model->save())
-				date_default_timezone_set('America/Caracas');
-				$auditoria = new Auditoria;
-				$auditoria->id_user=Yii::app()->user->getId();
-				$auditoria->accion=3;
-				$auditoria->modelo=$this->modelo;
-				$auditoria->id_registro=$model->id;
-				$auditoria->fecha=date("Y-m-d h:i:s"); 
-				$auditoria->save(false);
-
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -148,14 +116,6 @@ class EmpresaController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-		date_default_timezone_set('America/Caracas');
-		$auditoria = new Auditoria;
-		$auditoria->id_user=Yii::app()->user->getId();
-		$auditoria->accion=4;
-		$auditoria->modelo=$this->modelo;
-		$auditoria->id_registro=$id;
-		$auditoria->fecha=date("Y-m-d h:i:s"); 
-		$auditoria->save(false);
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -167,7 +127,7 @@ class EmpresaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Empresa');
+		$dataProvider=new CActiveDataProvider('Auditoria');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -178,10 +138,10 @@ class EmpresaController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Empresa('search');
+		$model=new Auditoria('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Empresa']))
-			$model->attributes=$_GET['Empresa'];
+		if(isset($_GET['Auditoria']))
+			$model->attributes=$_GET['Auditoria'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -192,12 +152,12 @@ class EmpresaController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Empresa the loaded model
+	 * @return Auditoria the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Empresa::model()->findByPk($id);
+		$model=Auditoria::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -205,46 +165,14 @@ class EmpresaController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Empresa $model the model to be validated
+	 * @param Auditoria $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='empresa-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='auditoria-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 	}
-
-	public function actionAutocomplete($term) 
-{
- $criteria = new CDbCriteria;
- $criteria->compare('LOWER(nombre_emp)', strtolower($_GET['term']), true);
- $criteria->order = 'nombre_emp';
- $criteria->limit = 30; 
- $data = Empresa::model()->findAll($criteria);
-
- if (!empty($data))
- {
-  $arr = array();
-  foreach ($data as $item) {
-   $arr[] = array(
-    'id' => $item->id,
-    'value' => $item->nombre_emp,
-    'label' => $item->nombre_emp,
-   );
-  }
- }
- else
- {
-  $arr = array();
-  $arr[] = array(
-   'id' => '',
-   'value' => 'No se han encontrado resultados para su búsqueda',
-   'label' => 'No se han encontrado resultados para su búsqueda',
-  );
- }
-  
- echo CJSON::encode($arr);
-}
 }

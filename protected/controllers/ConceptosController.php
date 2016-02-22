@@ -7,6 +7,7 @@ class ConceptosController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column1';
+	public $modelo='Conceptos';
 
 	/**
 	 * @return array action filters
@@ -64,6 +65,14 @@ class ConceptosController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+		date_default_timezone_set('America/Caracas');
+		$auditoria = new Auditoria;
+		$auditoria->id_user=Yii::app()->user->getId();
+		$auditoria->accion=1;
+		$auditoria->modelo=$this->modelo;
+		$auditoria->id_registro=$id;
+		$auditoria->fecha=date("Y-m-d h:i:s"); 
+		$auditoria->save(false);
 	}
 
 	/**
@@ -81,6 +90,15 @@ class ConceptosController extends Controller
 		{
 			$model->attributes=$_POST['Conceptos'];
 			if($model->save())
+				date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=2;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=$model->id;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);
+
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -105,6 +123,15 @@ class ConceptosController extends Controller
 		{
 			$model->attributes=$_POST['Conceptos'];
 			if($model->save())
+				date_default_timezone_set('America/Caracas');
+				$auditoria = new Auditoria;
+				$auditoria->id_user=Yii::app()->user->getId();
+				$auditoria->accion=3;
+				$auditoria->modelo=$this->modelo;
+				$auditoria->id_registro=$model->id;
+				$auditoria->fecha=date("Y-m-d h:i:s"); 
+				$auditoria->save(false);
+
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -121,6 +148,14 @@ class ConceptosController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
+		date_default_timezone_set('America/Caracas');
+		$auditoria = new Auditoria;
+		$auditoria->id_user=Yii::app()->user->getId();
+		$auditoria->accion=4;
+		$auditoria->modelo=$this->modelo;
+		$auditoria->id_registro=$id;
+		$auditoria->fecha=date("Y-m-d h:i:s"); 
+		$auditoria->save(false);
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

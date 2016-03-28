@@ -39,7 +39,7 @@ class Personas extends CActiveRecord
 			array('cedula','numerical'),
 			array('cedula','unique', 'message'=>'Esta CI ya esta registrada'),
 			array('nombre, apellido, email', 'length', 'max'=>50),
-			array('cedula', 'length', 'max'=>15),
+			array('cedula, telefono', 'length', 'max'=>15),
 			array('nacionalidad, sexo', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

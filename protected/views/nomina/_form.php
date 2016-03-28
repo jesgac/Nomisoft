@@ -180,7 +180,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
 						</span>
-						<?php echo $form->dropDownList($c, 'lph', array(''=>'FAOV','0'=>'No', '1'=>'Si'),array('class'=>'form-control','title'=>'Indique con SI o NO el descuento por Fondo de Ahorro Obligatorio para la Vivienda.' )); ?>
+						<?php echo $form->dropDownList($c, 'lph', array('1'=>'FAOV (Si)','0'=>'No'),array('class'=>'form-control','title'=>'Indique con SI o NO el descuento por Fondo de Ahorro Obligatorio para la Vivienda.' )); ?>
 						<?php echo  $c->hasErrors('lph') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($c,'lph'); ?>
@@ -200,7 +200,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
 						</span>
-						<?php echo $form->dropDownList($c, 'spf', array(''=>'SPF','0'=>'No', '1'=>'Si'),array('class'=>'form-control', 'title'=>'Indique con SI o NO el descuento por Seguro Paro Forzoso.')); ?>
+						<?php echo $form->dropDownList($c, 'spf', array('1'=>'SPF (Si)','0'=>'No'),array('class'=>'form-control', 'title'=>'Indique con SI o NO el descuento por Seguro Paro Forzoso.')); ?>
 						<?php echo  $c->hasErrors('spf') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($c,'spf'); ?>
@@ -210,7 +210,7 @@
 						<span class="input-group-addon">
 							<i class="fa fa-money fa-fw"></i>
 						</span>
-						<?php echo $form->dropDownList($c, 'sso', array(''=>'SSO','0'=>'No', '1'=>'Si'),array('class'=>'form-control', 'title'=>'Indique con SI o NO el descuento por Seguro Social Obligatorio.')); ?>
+						<?php echo $form->dropDownList($c, 'sso', array('1'=>'SSO (Si)','0'=>'No'),array('class'=>'form-control', 'title'=>'Indique con SI o NO el descuento por Seguro Social Obligatorio.')); ?>
 						<?php echo  $c->hasErrors('sso') ? "<span class='input-group-addon danger'><span class='glyphicon glyphicon-remove'></span></span>" : ''?>
 					</div>
 					<?php echo $form->error($c,'sso'); ?>

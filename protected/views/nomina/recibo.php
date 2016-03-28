@@ -40,8 +40,7 @@
 			<TD class="no-border">Sueldo</TD>
 			<td class="no-border"><?php echo $a->cargo->tipo_sueldo == 1 ? 'Semanal' : 'Quincenal'; ?></td>
 			<td><?php echo $a->cargo->tipo_sueldo == 1 ? number_format($a->cargo->sueldo, 2,',','.')." Bs." : number_format(($a->cargo->sueldo /2), 2,',','.')." Bs."; ?></td>
-			
-			
+						
 		</tr>
 		<tr>
 			<td colspan="3" bgcolor="cyan" class="center bold">I ASIGNACIONES</td>
@@ -96,6 +95,12 @@
 		<tr>
 			<td colspan="2">Prestamos</td>
 			<td class="right"><?php echo ($a->prestamos==0) ? '-' : number_format($a->prestamos, 2,',','.')." Bs." ?></td>
+			<td colspan="2"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="2">Asistencia</td>
+			<td class="right"><?php echo ($a->asig->asistencia==0) ? '-' : number_format($a->asistencia($a->asig->asistencia,$a->empleado->id), 2,',','.')." Bs." ?></td>  
 			<td colspan="2"></td>
 			<td></td>
 		</tr>

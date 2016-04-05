@@ -64,7 +64,7 @@ $this->menu=array(
 		$linea = "02";
 		$linea .= ucwords($data->persona->nacionalidad);
 		$linea .= rellena_cedula($data->persona->cedula);
-		$nombre_completo .= $data->persona->nombre.' '.$data->persona->apellido;
+		$nombre_completo .= especiales($data->persona->nombre.' '.$data->persona->apellido);
 		$linea .= rellena_nombre(strtoupper($nombre_completo));
 		$nombre_completo = '';
 		$linea .= rellena_lote($referencia);
@@ -134,6 +134,23 @@ $this->menu=array(
 	//TIPO  II: Rellenan con "0" a la izquierda de las cifras enteras.
 	//TIPO III: Rellenan  con espacios en blanco " " la parte restante de la cadena.
 	
+	function especiales($str){
+		$str = str_replace('á', 'a', $str);
+		$str = str_replace('Á', 'A', $str);
+		$str = str_replace('é', 'e', $str);
+		$str = str_replace('É', 'E', $str);
+		$str = str_replace('í', 'i', $str);
+		$str = str_replace('Í', 'I', $str);
+		$str = str_replace('ó', 'o', $str);
+		$str = str_replace('Ó', 'O', $str);
+		$str = str_replace('ú', 'u', $str);
+		$str = str_replace('Ú', 'U', $str);
+		$str = str_replace('ñ', 'n', $str);
+		$str = str_replace('Ñ', 'N', $str);
+
+		return $str;
+	}
+
 	function rellena_total($a){ //TIPO I
 		$numero = explode(".", $a);
 		$cadena = '';
